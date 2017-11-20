@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaleShopCore.Data\SaleShopCore.Data.csproj" />
+    <ProjectReference Include="..\SaleShopCore.Infrastructure\SaleShopCore.Infrastructure.csproj" />
+    <ProjectReference Include="..\SaleShopCore.Utilities\SaleShopCore.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
