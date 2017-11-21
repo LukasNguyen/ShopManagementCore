@@ -5,15 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Configurations\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Repositories\" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SaleShopCore.Data\SaleShopCore.Data.csproj" />
     <ProjectReference Include="..\SaleShopCore.Infrastructure\SaleShopCore.Infrastructure.csproj" />
     <ProjectReference Include="..\SaleShopCore.Utilities\SaleShopCore.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>
