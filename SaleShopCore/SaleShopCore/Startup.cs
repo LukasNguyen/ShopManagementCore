@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SaleShopCore.Application.Implementation;
+using SaleShopCore.Application.Interfaces;
 using SaleShopCore.Data;
 using SaleShopCore.Data.EF;
+using SaleShopCore.Data.EF.Repositories;
 using SaleShopCore.Data.Entities;
+using SaleShopCore.Data.IRepositories;
 using SaleShopCore.Models;
 using SaleShopCore.Services;
 
@@ -38,9 +43,18 @@ namespace SaleShopCore
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
+
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbIntializer>();
 
+            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductCategoryService, ProductCategoryService>();
+
+            services.AddSingleton(Mapper.Configuration);
+            services.AddScoped<IMapper>(
+                serviceprovider => new Mapper(serviceprovider.GetRequiredService<AutoMapper.IConfigurationProvider>(),
+                    serviceprovider.GetService)); 
+            
             services.AddMvc();
         }
 

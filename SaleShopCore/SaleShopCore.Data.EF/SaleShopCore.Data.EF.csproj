@@ -15,8 +15,4 @@
     <ProjectReference Include="..\SaleShopCore.Utilities\SaleShopCore.Utilities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
