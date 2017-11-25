@@ -57,7 +57,7 @@ namespace SaleShopCore.Data.EF
                     DateCreated = DateTime.Now,
                     DateModified = DateTime.Now,
                     Status = Status.Active
-                }, "1");
+                }, "123456");
                 var user = await _userManager.FindByNameAsync("youandpro");
                 await _userManager.AddToRoleAsync(user, "Admin");
             }

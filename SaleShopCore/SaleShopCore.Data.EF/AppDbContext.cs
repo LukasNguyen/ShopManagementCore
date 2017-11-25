@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
 using SaleShopCore.Data.EF.Configurations;
 using SaleShopCore.Data.EF.Extensions;
 using SaleShopCore.Data.Entities;
@@ -75,7 +78,10 @@ namespace SaleShopCore.Data.EF
 
 
             #endregion
+
+            builder.AddConfiguration(new AdvertistmentPageConfiguration());
             builder.AddConfiguration(new AdvertistmentPositionConfiguration());
+            builder.AddConfiguration(new AnnouncementConfiguration());
             builder.AddConfiguration(new BlogTagConfiguration());
             builder.AddConfiguration(new ContactDetailConfiguration());
             builder.AddConfiguration(new FooterConfiguration());
@@ -84,7 +90,9 @@ namespace SaleShopCore.Data.EF
             builder.AddConfiguration(new ProductTagConfiguration());
             builder.AddConfiguration(new SystemConfigConfiguration());
             builder.AddConfiguration(new TagConfiguration());
-            base.OnModelCreating(builder);
+
+            //Sử dụng những cái model config bên trên không dùng model default
+            //base.OnModelCreating(builder);
         }
 
         public override int SaveChanges()
@@ -105,6 +113,18 @@ namespace SaleShopCore.Data.EF
                 }
             }
             return base.SaveChanges();
+        }
+    }
+
+    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+    {
+        public AppDbContext CreateDbContext(string[] args)
+        {
+            IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
+            var builder = new DbContextOptionsBuilder<AppDbContext>();
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            builder.UseSqlServer(connectionString);
+            return new AppDbContext(builder.Options);
         }
     }
 }

@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SaleShopCore.Application.Implementation;
 using SaleShopCore.Application.Interfaces;
-using SaleShopCore.Data;
 using SaleShopCore.Data.EF;
 using SaleShopCore.Data.EF.Repositories;
 using SaleShopCore.Data.Entities;
 using SaleShopCore.Data.IRepositories;
-using SaleShopCore.Models;
 using SaleShopCore.Services;
 
 namespace SaleShopCore
@@ -34,11 +29,33 @@ namespace SaleShopCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),n=>n.MigrationsAssembly("SaleShopCore.Data.EF")));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), n => n.MigrationsAssembly("SaleShopCore.Data.EF")));
 
             services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+
+
+            // Configure Identity
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+
+                // Lockout settings
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+                options.Lockout.MaxFailedAccessAttempts = 10;
+
+                // User settings
+                options.User.RequireUniqueEmail = true;
+            });
+
+
+            services.AddAutoMapper();
 
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
@@ -53,13 +70,13 @@ namespace SaleShopCore
             services.AddSingleton(Mapper.Configuration);
             services.AddScoped<IMapper>(
                 serviceprovider => new Mapper(serviceprovider.GetRequiredService<AutoMapper.IConfigurationProvider>(),
-                    serviceprovider.GetService)); 
-            
+                    serviceprovider.GetService));
+
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,DbIntializer dbIntializer)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -83,7 +100,7 @@ namespace SaleShopCore
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            dbIntializer.Seed().Wait();
+            //dbIntializer.Seed().Wait();
         }
     }
 }
