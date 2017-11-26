@@ -1,0 +1,14 @@
+{
+  "name": "flot.curvedlines",
+  "homepage": "https://github.com/MichaelZinsmaier/CurvedLines",
+  "_release": "v0_3_befpre_api_break",
+  "_resolution": {
+    "type": "tag",
+    "tag": "v0_3_befpre_api_break",
+    "commit": "fb596bd510637869d03d9615cc389b15bcacbe97"
+  },
+  "_source": "https://github.com/MichaelZinsmaier/CurvedLines.git",
+  "_target": "v0_3_befpre_api_break",
+  "_originalSource": "flot.curvedlines",
+  "_direct": true
+}
