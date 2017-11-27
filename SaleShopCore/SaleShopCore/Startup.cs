@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 using SaleShopCore.Application.Implementation;
 using SaleShopCore.Application.Interfaces;
 using SaleShopCore.Data.EF;
@@ -72,14 +74,18 @@ namespace SaleShopCore
                 serviceprovider => new Mapper(serviceprovider.GetRequiredService<AutoMapper.IConfigurationProvider>(),
                     serviceprovider.GetService));
 
-            services.AddMvc();
+
+            //Không chuyển đổi json object truyền lên data client sang chữ thường
+            services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("Logs/lukas-{Date}.txt");
+
             if (env.IsDevelopment())
-            {
+            { 
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
                 app.UseDatabaseErrorPage();
