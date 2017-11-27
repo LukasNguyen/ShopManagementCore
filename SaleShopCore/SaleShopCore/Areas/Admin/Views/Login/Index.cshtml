@@ -28,50 +28,56 @@
 </head>
 
 <body class="login">
-<div>
-    <div class="login_wrapper">
-        <div class="animate form login_form">
-            <section class="login_content">
-                <form>
-                    @Html.AntiForgeryToken()
-                    <h1>Đăng nhập</h1>
-                    <div>
-                        <input type="text" class="form-control" name="userName" placeholder="Tên đăng nhập" id="txtUserName" required=""/>
-                    </div>
-                    <div>
-                        <input type="password" class="form-control" name="password" placeholder="Password" id="txtPassword" required=""/>
-                    </div>
-                    <div>
-                        <a class="btn btn-default submit" href="#" id="btnLogin">Đăng nhập</a>
-                        <a class="reset_pass" href="#">Quên mật khẩu?</a>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                    <div class="separator">
-
+    <div>
+        <div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    <form id="frmLogin">
+                        @Html.AntiForgeryToken()
+                        <h1>Đăng nhập</h1>
+                        <div>
+                            <input type="text" data-required="true" class="form-control" name="userName" placeholder="Tên đăng nhập" id="txtUserName" required="" />
+                        </div>
+                        <div>
+                            <input type="password" data-required="true" class="form-control" name="password" placeholder="Password" id="txtPassword" required="" />
+                        </div>
+                        <div>
+                            <a class="btn btn-default submit" href="#" id="btnLogin">Đăng nhập</a>
+                            <a class="reset_pass" href="#">Quên mật khẩu?</a>
+                        </div>
 
                         <div class="clearfix"></div>
-                        <br/>
 
-                        <div>
-                            <h1><i class="fa fa-paw"></i> Gentelella Alela!
-                            </h1>
-                            <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                        <div class="separator">
+
+
+                            <div class="clearfix"></div>
+                            <br />
+
+                            <div>
+                                <h1>
+                                    <i class="fa fa-paw"></i> Gentelella Alela!
+                                </h1>
+                                <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </section>
+                    </form>
+                </section>
+            </div>
         </div>
     </div>
-</div>
-    
+
     <script src="~/lib/jquery/jquery.js"></script>
     <script src="~/lib/notifyjs/dist/notify.js"></script>
     <script src="~/lib/notifyjs/dist/styles/metro/notify-metro.js"></script>
-    <script src="~/app/shared/lukas.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation/localization/messages_vi.js"></script>
+
+<script src="~/app/shared/lukas.js"></script>
     <script src="~/app/controllers/login/index.js"></script>
-    
+
     <script>
         var login = new loginController();
         login.initialize();

@@ -3,12 +3,37 @@
         registerEvents();
     }
 
-    var registerEvents = function() {
-        $('#btnLogin').on('click',function(e) {
+    var registerEvents = function () {
+
+        $('#frmLogin').validate({
+            errorClass: 'red',
+            ignore: [], // không bỏ nó ra khỏi validate của form
+            //lang: 'vi',
+            rules: {
+                userName: {
+                    required: true
+                },
+                password: {
+                    required: true
+                }
+            },
+            messages: {
+                userName: {
+                    required: 'Vui lòng nhập tên tài khoản'
+                },
+                password: {
+                    required: 'Vui lòng nhập mật khẩu'
+                }
+            }
+        });
+
+        $('#btnLogin').on('click', function (e) {
+            if($('#frmLogin').valid()){
             e.preventDefault();
             var user = $('#txtUserName').val();
             var password = $('#txtPassword').val();
             login(user, password);
+            }
         });
     }
 
