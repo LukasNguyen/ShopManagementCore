@@ -17,6 +17,8 @@
     "flot.orderbars": "~1.0.0",
     "flot-spline": "0.8.2",
     "flot.curvedlines": "v0_3_befpre_api_break",
-    "DateJS": "v1.0.0-rc3"
+    "DateJS": "v1.0.0-rc3",
+    "notifyjs": "v0.4.2",
+    "bootbox.js": "bootbox#v4.4.0"
   }
 }
