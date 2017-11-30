@@ -14,6 +14,7 @@ using SaleShopCore.Data.EF;
 using SaleShopCore.Data.EF.Repositories;
 using SaleShopCore.Data.Entities;
 using SaleShopCore.Data.IRepositories;
+using SaleShopCore.Helpers;
 using SaleShopCore.Services;
 
 namespace SaleShopCore
@@ -65,6 +66,8 @@ namespace SaleShopCore
 
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbIntializer>();
+
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
 
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
