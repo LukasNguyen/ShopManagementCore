@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SaleShopCore.Data.Entities;
@@ -9,6 +10,7 @@ using SaleShopCore.Data.Entities;
 namespace SaleShopCore.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class AccountController : Controller
     {
         private SignInManager<AppUser> _signInManager;

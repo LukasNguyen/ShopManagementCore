@@ -8,9 +8,9 @@ using SaleShopCore.Extensions;
 
 namespace SaleShopCore.Areas.Admin.Controllers
 {
-    [Authorize]
     [Area("Admin")]
-    public class HomeController : Controller
+    [Authorize]
+    public class HomeController :Controller
     {
         public IActionResult Index()
         {

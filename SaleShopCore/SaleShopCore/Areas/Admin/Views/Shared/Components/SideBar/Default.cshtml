@@ -7,10 +7,10 @@
             {
                 <li>
                     <a><i class="fa @item.IconCss"></i> @item.Name <span class="fa fa-chevron-down"></span></a>
-                    @if (Model.Any(n => n.ParentId == item.ParentId))
+                    @if (Model.Any(n => n.ParentId == item.Id))
                     {
                         <ul class="nav child_menu">
-                            @foreach (var jitem in Model.Where(n=>n.ParentId == item.ParentId))
+                            @foreach (var jitem in Model.Where(n=>n.ParentId == item.Id))
                             {
                                 <li><a href="@jitem.URL">@jitem.Name</a></li>
                             }
