@@ -1,5 +1,4 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -15,7 +14,9 @@ using SaleShopCore.Data.EF.Repositories;
 using SaleShopCore.Data.Entities;
 using SaleShopCore.Data.IRepositories;
 using SaleShopCore.Helpers;
+using SaleShopCore.Infrastructure.Interfaces;
 using SaleShopCore.Services;
+using System;
 
 namespace SaleShopCore
 {
@@ -38,7 +39,6 @@ namespace SaleShopCore
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
-
             // Configure Identity
             services.Configure<IdentityOptions>(options =>
             {
@@ -57,7 +57,6 @@ namespace SaleShopCore
                 options.User.RequireUniqueEmail = true;
             });
 
-
             services.AddAutoMapper();
 
             // Add application services.
@@ -74,9 +73,11 @@ namespace SaleShopCore
                 serviceprovider => new Mapper(serviceprovider.GetRequiredService<AutoMapper.IConfigurationProvider>(),
                     serviceprovider.GetService));
 
-
             //Không chuyển đổi json object truyền lên data client sang chữ thường
             services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+
+            services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
+            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
 
             //Repositories
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
@@ -87,16 +88,15 @@ namespace SaleShopCore
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
             services.AddTransient<IFunctionService, FunctionService>();
             services.AddTransient<IProductService, ProductService>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddFile("Logs/lukas-{Date}.txt");
 
             if (env.IsDevelopment())
-            { 
+            {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
                 app.UseDatabaseErrorPage();
