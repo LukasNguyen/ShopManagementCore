@@ -2,6 +2,7 @@
     this.initialize = function () {
         loadData();
         registerEvents();
+        loadCategories();
     }
 
     function registerEvents() {
@@ -9,6 +10,37 @@
             lukas.configs.pageSize = $(this).val();
             lukas.configs.pageIndex = 1;
             loadData(true);
+        });
+
+        $('#btnSearch').on('click', function () {
+            loadData();
+        });
+
+        $('#txtKeyword').on('keypress', function (e) {
+            if (e.which === 13) {
+                loadData();
+            }
+        });
+    }
+
+    function loadCategories() {
+        var template = $('#table-template').html();
+        var render = "<option value=''>-- Select category --</option>";
+        $.ajax({
+            type: 'GET',
+            url: '/admin/Product/GetAllCategories',
+            dataType: 'json',
+            success: function (response) {
+                $.each(response, function (i, item) {
+                    render += "<option value='"+ item.Id +"'>" + item.Name + "</option>"
+                });
+
+                $('#ddlCategorySearch').html(render);
+            },
+            error: function (status) {
+                console.log(status);
+                lukas.notify('Cannot load product category data', 'error');
+            }
         });
     }
 
@@ -19,7 +51,7 @@
             type: 'GET',
             url: '/admin/Product/GetAllPaging',
             data: {
-                categoryId: null,
+                categoryId: $('#ddlCategorySearch').val(),
                 keyword: $('#txtKeyword').val(),
                 page: lukas.configs.pageIndex,
                 pageSize: lukas.configs.pageSize
@@ -28,7 +60,6 @@
             success: function (response) {
                 lukas.startLoading();
                 $.each(response.Results, function (i, item) {
-                    console.log(item);
                     render += Mustache.render(template,
                         {
                             Id: item.Id,
