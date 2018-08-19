@@ -1,0 +1,476 @@
+2017-11-27T22:01:30.4839783+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2017-11-27T22:01:31.2422880+07:00  [INF] Executed DbCommand ("111"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:01:31.3222541+07:00  [INF] Executed DbCommand ("32"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:01:31.3871784+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2017-11-27T22:01:31.4608875+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2017-11-27T22:01:31.5244665+07:00  [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2017-11-27T22:01:31.5577623+07:00  [INF] Executed DbCommand ("21"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2017-11-27T22:01:31.5961562+07:00  [INF] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2017-11-27T22:01:31.6508420+07:00  [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2017-11-27T22:01:31.7258093+07:00  [INF] Executed DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2017-11-27T22:01:31.7789736+07:00  [INF] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:01:31.8296412+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:01:31.9683541+07:00  [INF] Executed DbCommand ("81"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:01:32.5131725+07:00 0HL9LKUVG705O:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/   (ca22a1cb)
+2017-11-27T22:01:32.9395157+07:00 0HL9LKUVG705O:00000001 [INF] Executing action method "SaleShopCore.Controllers.HomeController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:01:39.1800386+07:00 0HL9LKUVG705O:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2017-11-27T22:01:40.4318969+07:00 0HL9LKUVG705O:00000001 [INF] Executed action "SaleShopCore.Controllers.HomeController.Index (SaleShopCore)" in 7583.7134ms (afa2e885)
+2017-11-27T22:01:40.4716217+07:00 0HL9LKUVG705O:00000001 [INF] Request finished in 7955.7104ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:01:40.4798681+07:00 0HL9LKUVG705Q:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery/dist/jquery.js   (ca22a1cb)
+2017-11-27T22:01:40.4845073+07:00 0HL9LKUVG705R:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/css/site.css   (ca22a1cb)
+2017-11-27T22:01:40.5058173+07:00 0HL9LKUVG705Q:00000001 [INF] Request finished in 19.6306ms 404  (791a596a)
+2017-11-27T22:01:40.5327150+07:00 0HL9LKUVG705R:00000001 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2017-11-27T22:01:40.5579055+07:00 0HL9LKUVG705O:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2017-11-27T22:01:40.5709234+07:00 0HL9LKUVG705O:00000002 [INF] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified (f1f8d725)
+2017-11-27T22:01:40.6129399+07:00 0HL9LKUVG705R:00000001 [INF] Request finished in 76.234ms 304 text/css (791a596a)
+2017-11-27T22:01:40.6274412+07:00 0HL9LKUVG705O:00000002 [INF] Request finished in 34.8811ms 304 text/css (791a596a)
+2017-11-27T22:01:40.6399411+07:00 0HL9LKUVG705Q:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2017-11-27T22:01:40.6458710+07:00 0HL9LKUVG705S:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/images/banner3.svg   (ca22a1cb)
+2017-11-27T22:01:40.6683014+07:00 0HL9LKUVG705T:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/images/banner4.svg   (ca22a1cb)
+2017-11-27T22:01:40.6913516+07:00 0HL9LKUVG705R:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA   (ca22a1cb)
+2017-11-27T22:01:40.7038677+07:00 0HL9LKUVG705S:00000001 [INF] The file "/images/banner3.svg" was not modified (f1f8d725)
+2017-11-27T22:01:40.7251058+07:00 0HL9LKUVG705Q:00000002 [INF] The file "/lib/bootstrap/dist/js/bootstrap.js" was not modified (f1f8d725)
+2017-11-27T22:01:40.7516781+07:00 0HL9LKUVG705O:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/images/banner1.svg   (ca22a1cb)
+2017-11-27T22:01:40.7780460+07:00 0HL9LKUVG705T:00000001 [INF] The file "/images/banner4.svg" was not modified (f1f8d725)
+2017-11-27T22:01:40.7990545+07:00 0HL9LKUVG705R:00000002 [INF] The file "/js/site.js" was not modified (f1f8d725)
+2017-11-27T22:01:40.8230057+07:00 0HL9LKUVG705S:00000001 [INF] Request finished in 94.4927ms 304 image/svg+xml (791a596a)
+2017-11-27T22:01:40.8400045+07:00 0HL9LKUVG705Q:00000002 [INF] Request finished in 163.6422ms 304 application/javascript (791a596a)
+2017-11-27T22:01:40.8616506+07:00 0HL9LKUVG705R:00000002 [INF] Request finished in 150.0278ms 304 application/javascript (791a596a)
+2017-11-27T22:01:40.8934514+07:00 0HL9LKUVG705O:00000003 [INF] The file "/images/banner1.svg" was not modified (f1f8d725)
+2017-11-27T22:01:40.9633344+07:00 0HL9LKUVG705U:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/images/banner2.svg   (ca22a1cb)
+2017-11-27T22:01:41.1507139+07:00 0HL9LKUVG705T:00000001 [INF] Request finished in 164.3598ms 304 image/svg+xml (791a596a)
+2017-11-27T22:01:41.1541921+07:00 0HL9LKUVG705U:00000001 [INF] The file "/images/banner2.svg" was not modified (f1f8d725)
+2017-11-27T22:01:41.1711191+07:00 0HL9LKUVG705O:00000003 [INF] Request finished in 259.1223ms 304 image/svg+xml (791a596a)
+2017-11-27T22:01:41.2307182+07:00 0HL9LKUVG705U:00000001 [INF] Request finished in 312.9037ms 304 image/svg+xml (791a596a)
+2017-11-27T22:01:41.2390330+07:00 0HL9LKUVG705V:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2017-11-27T22:01:41.2481001+07:00 0HL9LKUVG705V:00000001 [INF] The file "/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" was not modified (f1f8d725)
+2017-11-27T22:01:41.2858132+07:00 0HL9LKUVG705V:00000001 [INF] Request finished in 174.7971ms 304 font/woff2 (791a596a)
+2017-11-27T22:02:24.7536958+07:00 0HL9LKUVG705S:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/login/authorize   (ca22a1cb)
+2017-11-27T22:02:24.8072239+07:00 0HL9LKUVG705S:00000002 [INF] Request finished in 8.8498ms 404  (791a596a)
+2017-11-27T22:02:37.0181540+07:00 0HL9LKUVG705Q:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/login/   (ca22a1cb)
+2017-11-27T22:02:37.0626275+07:00 0HL9LKUVG705Q:00000003 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:02:37.5794272+07:00 0HL9LKUVG705Q:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2017-11-27T22:02:37.6536863+07:00 0HL9LKUVG705Q:00000003 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" in 617.5853ms (afa2e885)
+2017-11-27T22:02:37.6986914+07:00 0HL9LKUVG705Q:00000003 [INF] Request finished in 646.6252ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:02:37.7751581+07:00 0HL9LKUVG705S:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2017-11-27T22:02:37.7979879+07:00 0HL9LKUVG705O:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/nprogress/nprogress.css   (ca22a1cb)
+2017-11-27T22:02:37.8048479+07:00 0HL9LKUVG705V:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/css/custom.css   (ca22a1cb)
+2017-11-27T22:02:37.8230950+07:00 0HL9LKUVG7060:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/controllers/login/index.js   (ca22a1cb)
+2017-11-27T22:02:37.8275170+07:00 0HL9LKUVG705U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery/jquery.js   (ca22a1cb)
+2017-11-27T22:02:37.8423472+07:00 0HL9LKUVG7061:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/shared/lukas.js   (ca22a1cb)
+2017-11-27T22:02:37.8465814+07:00 0HL9LKUVG705S:00000003 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2017-11-27T22:02:37.8599695+07:00 0HL9LKUVG705O:00000004 [INF] The file "/lib/nprogress/nprogress.css" was not modified (f1f8d725)
+2017-11-27T22:02:37.8822837+07:00 0HL9LKUVG705R:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2017-11-27T22:02:37.8914274+07:00 0HL9LKUVG705T:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2017-11-27T22:02:37.8990152+07:00 0HL9LKUVG705Q:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2017-11-27T22:02:37.9076786+07:00 0HL9LKUVG705V:00000002 [INF] The file "/admin-side/css/custom.css" was not modified (f1f8d725)
+2017-11-27T22:02:37.9161582+07:00 0HL9LKUVG7060:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2017-11-27T22:02:37.9289078+07:00 0HL9LKUVG705U:00000002 [INF] The file "/lib/jquery/jquery.js" was not modified (f1f8d725)
+2017-11-27T22:02:38.0933433+07:00 0HL9LKUVG705O:00000004 [INF] Request finished in 180.4494ms 304 text/css (791a596a)
+2017-11-27T22:02:38.0973744+07:00 0HL9LKUVG705S:00000003 [INF] Request finished in 163.1427ms 200 application/javascript (791a596a)
+2017-11-27T22:02:38.1054040+07:00 0HL9LKUVG705V:00000002 [INF] Request finished in 216.2808ms 304 text/css (791a596a)
+2017-11-27T22:02:38.1154483+07:00 0HL9LKUVG705U:00000002 [INF] Request finished in 231.6918ms 304 application/javascript (791a596a)
+2017-11-27T22:02:38.1232770+07:00 0HL9LKUVG7061:00000001 [INF] Sending file. Request path: '"/app/shared/lukas.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\shared\lukas.js"' (27b0a520)
+2017-11-27T22:02:38.1586999+07:00 0HL9LKUVG705R:00000003 [INF] The file "/lib/font-awesome/css/font-awesome.css" was not modified (f1f8d725)
+2017-11-27T22:02:38.1940579+07:00 0HL9LKUVG705Q:00000004 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2017-11-27T22:02:38.2445848+07:00 0HL9LKUVG7060:00000001 [INF] Request finished in 368.7673ms 200 application/javascript (791a596a)
+2017-11-27T22:02:38.2649215+07:00 0HL9LKUVG705T:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2017-11-27T22:02:38.2662181+07:00 0HL9LKUVG705Q:00000004 [INF] Request finished in 457.4571ms 200 application/javascript (791a596a)
+2017-11-27T22:02:38.2711533+07:00 0HL9LKUVG7061:00000001 [INF] Request finished in 492.7933ms 200 application/javascript (791a596a)
+2017-11-27T22:02:38.3057530+07:00 0HL9LKUVG705R:00000003 [INF] Request finished in 477.3803ms 304 text/css (791a596a)
+2017-11-27T22:02:38.3227672+07:00 0HL9LKUVG705T:00000002 [INF] Request finished in 592.0634ms 200 text/css (791a596a)
+2017-11-27T22:02:38.4134543+07:00 0HL9LKUVG705O:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2017-11-27T22:02:38.4229029+07:00 0HL9LKUVG705O:00000005 [INF] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified (f1f8d725)
+2017-11-27T22:02:38.4373135+07:00 0HL9LKUVG705O:00000005 [INF] Request finished in 20.1741ms 304 font/woff2 (791a596a)
+2017-11-27T22:02:49.5559246+07:00 0HL9LKUVG705S:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2017-11-27T22:02:49.5655802+07:00 0HL9LKUVG705S:00000004 [INF] The file "/lib/bootstrap/dist/css/bootstrap.css.map" was not modified (f1f8d725)
+2017-11-27T22:02:49.6032164+07:00 0HL9LKUVG705S:00000004 [INF] Request finished in 17.3178ms 304 text/plain (791a596a)
+2017-11-27T22:04:45.8321485+07:00 0HL9LKUVG7062:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:44345/Admin/Login/Authen application/x-www-form-urlencoded; charset=UTF-8 34 (ca22a1cb)
+2017-11-27T22:04:45.9729399+07:00 0HL9LKUVG7062:00000001 [INF] Antiforgery token validation failed. "The required antiforgery request token was not provided in either form field \"__RequestVerificationToken\" or header value \"RequestVerificationToken\"." (843d91fe)
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery request token was not provided in either form field "__RequestVerificationToken" or header value "RequestVerificationToken".
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.<ValidateRequestAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter.<OnAuthorizationAsync>d__3.MoveNext()
+2017-11-27T22:04:45.9850917+07:00 0HL9LKUVG7062:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter"'. (8b6446cb)
+2017-11-27T22:04:45.9957432+07:00 0HL9LKUVG7062:00000001 [INF] Executing HttpStatusCodeResult, setting HTTP status code 400 (e28ccfae)
+2017-11-27T22:04:46.0016889+07:00 0HL9LKUVG7062:00000001 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" in 101.0995ms (afa2e885)
+2017-11-27T22:04:46.0177734+07:00 0HL9LKUVG7062:00000001 [INF] Request finished in 175.9479ms 400  (791a596a)
+2017-11-27T22:08:00.9901055+07:00 0HL9LKUVG7063:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/login/   (ca22a1cb)
+2017-11-27T22:08:01.0422160+07:00 0HL9LKUVG7063:00000001 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:08:01.0517809+07:00 0HL9LKUVG7063:00000001 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2017-11-27T22:08:01.2565998+07:00 0HL9LKUVG7063:00000001 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" in 64.7224ms (afa2e885)
+2017-11-27T22:08:01.4956592+07:00 0HL9LKUVG7065:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery/jquery.js   (ca22a1cb)
+2017-11-27T22:08:01.5578846+07:00 0HL9LKUVG7066:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2017-11-27T22:08:01.5738326+07:00 0HL9LKUVG7069:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/nprogress/nprogress.css   (ca22a1cb)
+2017-11-27T22:08:01.6664664+07:00 0HL9LKUVG7067:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/shared/lukas.js   (ca22a1cb)
+2017-11-27T22:08:01.7008417+07:00 0HL9LKUVG7068:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2017-11-27T22:08:01.7217082+07:00 0HL9LKUVG7064:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2017-11-27T22:08:01.7363532+07:00 0HL9LKUVG7065:00000001 [INF] Sending file. Request path: '"/lib/jquery/jquery.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jquery\jquery.js"' (27b0a520)
+2017-11-27T22:08:01.7421577+07:00 0HL9LKUVG7066:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2017-11-27T22:08:01.7809045+07:00 0HL9LKUVG7069:00000001 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2017-11-27T22:08:01.8338510+07:00 0HL9LKUVG706B:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2017-11-27T22:08:01.8581062+07:00 0HL9LKUVG7067:00000001 [INF] Sending file. Request path: '"/app/shared/lukas.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\shared\lukas.js"' (27b0a520)
+2017-11-27T22:08:01.8657338+07:00 0HL9LKUVG7068:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2017-11-27T22:08:01.9071817+07:00 0HL9LKUVG7063:00000001 [INF] Request finished in 273.8696ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:08:01.9576872+07:00 0HL9LKUVG706A:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2017-11-27T22:08:01.9952181+07:00 0HL9LKUVG7069:00000001 [INF] Request finished in 636.1678ms 200 text/css (791a596a)
+2017-11-27T22:08:02.0039560+07:00 0HL9LKUVG706B:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2017-11-27T22:08:02.0464933+07:00 0HL9LKUVG706C:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/css/custom.css   (ca22a1cb)
+2017-11-27T22:08:02.0584609+07:00 0HL9LKUVG7067:00000001 [INF] Request finished in 710.6356ms 200 application/javascript (791a596a)
+2017-11-27T22:08:02.0796960+07:00 0HL9LKUVG7064:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2017-11-27T22:08:02.0852008+07:00 0HL9LKUVG706A:00000001 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2017-11-27T22:08:02.1326631+07:00 0HL9LKUVG7066:00000001 [INF] Request finished in 631.0877ms 200 application/javascript (791a596a)
+2017-11-27T22:08:02.1753780+07:00 0HL9LKUVG706B:00000001 [INF] Request finished in 761.2955ms 200 text/css (791a596a)
+2017-11-27T22:08:02.1824206+07:00 0HL9LKUVG706C:00000001 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2017-11-27T22:08:02.3680361+07:00 0HL9LKUVG706D:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/controllers/login/index.js   (ca22a1cb)
+2017-11-27T22:08:02.6202819+07:00 0HL9LKUVG7064:00000001 [INF] Request finished in 1087.885ms 200 text/css (791a596a)
+2017-11-27T22:08:02.6300029+07:00 0HL9LKUVG706A:00000001 [INF] Request finished in 979.9712ms 200 text/css (791a596a)
+2017-11-27T22:08:02.6560748+07:00 0HL9LKUVG706C:00000001 [INF] Request finished in 893.1822ms 200 text/css (791a596a)
+2017-11-27T22:08:02.6747278+07:00 0HL9LKUVG7063:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2017-11-27T22:08:02.7502357+07:00 0HL9LKUVG7065:00000001 [INF] Request finished in 797.3202ms 200 application/javascript (791a596a)
+2017-11-27T22:08:02.7763542+07:00 0HL9LKUVG706D:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2017-11-27T22:08:02.8206591+07:00 0HL9LKUVG7063:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2017-11-27T22:08:02.8257470+07:00 0HL9LKUVG7068:00000001 [INF] Request finished in 700.9873ms 200 application/javascript (791a596a)
+2017-11-27T22:08:02.9252911+07:00 0HL9LKUVG706D:00000001 [INF] Request finished in 1391.4543ms 200 application/javascript (791a596a)
+2017-11-27T22:08:02.9453058+07:00 0HL9LKUVG7063:00000002 [INF] Request finished in 272.7521ms 200 font/woff2 (791a596a)
+2017-11-27T22:08:28.8437884+07:00 0HL9LKUVG7066:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44345/Admin/Login/Authen application/x-www-form-urlencoded; charset=UTF-8 34 (ca22a1cb)
+2017-11-27T22:08:28.9445959+07:00 0HL9LKUVG7066:00000002 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" with arguments (["SaleShopCore.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:08:48.9962089+07:00 0HL9LKUVG7066:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2017-11-27T22:08:49.3830408+07:00 0HL9LKUVG7066:00000002 [INF] Executed DbCommand ("299"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2017-11-27T22:08:49.6146997+07:00 0HL9LKUVG7066:00000002 [INF] Executed DbCommand ("72"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2017-11-27T22:08:49.6963910+07:00 0HL9LKUVG7066:00000002 [INF] Executed DbCommand ("27"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2017-11-27T22:08:49.7515631+07:00 0HL9LKUVG7066:00000002 [INF] Executed DbCommand ("38"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2017-11-27T22:08:49.8149222+07:00 0HL9LKUVG7066:00000002 [INF] Executed DbCommand ("35"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2017-11-27T22:08:49.8270979+07:00 0HL9LKUVG7066:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2017-11-27T22:09:07.0371838+07:00 0HL9LKUVG7066:00000002 [INF] User logged in. (fdce0db4)
+2017-11-27T22:09:07.0520507+07:00 0HL9LKUVG7066:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-27T22:09:07.1443624+07:00 0HL9LKUVG7066:00000002 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" in 38292.7817ms (afa2e885)
+2017-11-27T22:09:07.1986899+07:00 0HL9LKUVG7066:00000002 [INF] Request finished in 38309.5804ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-27T22:09:33.8728239+07:00 0HL9LKUVG7066:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/Admin/Home/Index   (ca22a1cb)
+2017-11-27T22:09:33.8870302+07:00 0HL9LKUVG7066:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:09:33.9333254+07:00 0HL9LKUVG7066:00000003 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:09:34.1640363+07:00 0HL9LKUVG7066:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2017-11-27T22:09:34.5731762+07:00 0HL9LKUVG7066:00000003 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" in 674.7712ms (afa2e885)
+2017-11-27T22:09:34.7112918+07:00 0HL9LKUVG7066:00000003 [INF] Request finished in 709.2175ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:09:34.7375831+07:00 0HL9LKUVG7066:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2017-11-27T22:09:34.7584142+07:00 0HL9LKUVG706E:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/fastclick/lib/fastclick.js   (ca22a1cb)
+2017-11-27T22:09:34.7642939+07:00 0HL9LKUVG7066:00000004 [INF] The file "/lib/bootstrap-daterangepicker/daterangepicker.css" was not modified (f1f8d725)
+2017-11-27T22:09:34.7787636+07:00 0HL9LKUVG706E:00000001 [INF] The file "/lib/fastclick/lib/fastclick.js" was not modified (f1f8d725)
+2017-11-27T22:09:34.9422805+07:00 0HL9LKUVG7066:00000004 [INF] Request finished in 41.7929ms 304 text/css (791a596a)
+2017-11-27T22:09:34.9482736+07:00 0HL9LKUVG706E:00000001 [INF] Request finished in 146.527ms 304 application/javascript (791a596a)
+2017-11-27T22:09:34.9556464+07:00 0HL9LKUVG706F:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery-sparkline/dist/jquery.sparkline.js   (ca22a1cb)
+2017-11-27T22:09:34.9608625+07:00 0HL9LKUVG706G:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/moment/moment.js   (ca22a1cb)
+2017-11-27T22:09:34.9791255+07:00 0HL9LKUVG706G:00000001 [INF] The file "/lib/moment/moment.js" was not modified (f1f8d725)
+2017-11-27T22:09:35.0880485+07:00 0HL9LKUVG706F:00000001 [INF] The file "/lib/jquery-sparkline/dist/jquery.sparkline.js" was not modified (f1f8d725)
+2017-11-27T22:09:35.2990081+07:00 0HL9LKUVG706E:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootbox.js/bootbox.js   (ca22a1cb)
+2017-11-27T22:09:35.3085059+07:00 0HL9LKUVG706G:00000001 [INF] Request finished in 142.1821ms 304 application/javascript (791a596a)
+2017-11-27T22:09:35.3227442+07:00 0HL9LKUVG7066:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap-daterangepicker/daterangepicker.js   (ca22a1cb)
+2017-11-27T22:09:35.3276481+07:00 0HL9LKUVG706F:00000001 [INF] Request finished in 253.3665ms 304 application/javascript (791a596a)
+2017-11-27T22:09:35.4962177+07:00 0HL9LKUVG706E:00000002 [INF] Sending file. Request path: '"/lib/bootbox.js/bootbox.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootbox.js\bootbox.js"' (27b0a520)
+2017-11-27T22:09:35.4985421+07:00 0HL9LKUVG706G:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/images/img.jpg   (ca22a1cb)
+2017-11-27T22:09:35.5277350+07:00 0HL9LKUVG7066:00000005 [INF] The file "/lib/bootstrap-daterangepicker/daterangepicker.js" was not modified (f1f8d725)
+2017-11-27T22:09:35.5541729+07:00 0HL9LKUVG706F:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/shared/lukas.js   (ca22a1cb)
+2017-11-27T22:09:35.6095999+07:00 0HL9LKUVG7066:00000005 [INF] Request finished in 479.7944ms 304 application/javascript (791a596a)
+2017-11-27T22:09:35.6123494+07:00 0HL9LKUVG706F:00000002 [INF] The file "/app/shared/lukas.js" was not modified (f1f8d725)
+2017-11-27T22:09:35.6758345+07:00 0HL9LKUVG706G:00000002 [INF] The file "/admin-side/images/img.jpg" was not modified (f1f8d725)
+2017-11-27T22:09:35.7283680+07:00 0HL9LKUVG706E:00000002 [INF] Request finished in 439.9823ms 200 application/javascript (791a596a)
+2017-11-27T22:09:35.7371922+07:00 0HL9LKUVG706F:00000002 [INF] Request finished in 276.1207ms 304 application/javascript (791a596a)
+2017-11-27T22:09:35.7480114+07:00 0HL9LKUVG706H:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/Chart.js/dist/Chart.js   (ca22a1cb)
+2017-11-27T22:09:35.7601132+07:00 0HL9LKUVG706G:00000002 [INF] Request finished in 359.6424ms 304 image/jpeg (791a596a)
+2017-11-27T22:09:35.7782248+07:00 0HL9LKUVG706E:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/js/custom.js   (ca22a1cb)
+2017-11-27T22:09:35.7971976+07:00 0HL9LKUVG706H:00000001 [INF] The file "/lib/Chart.js/dist/Chart.js" was not modified (f1f8d725)
+2017-11-27T22:09:35.8200655+07:00 0HL9LKUVG706I:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/nprogress/nprogress.js   (ca22a1cb)
+2017-11-27T22:09:35.8399040+07:00 0HL9LKUVG706I:00000001 [INF] The file "/lib/nprogress/nprogress.js" was not modified (f1f8d725)
+2017-11-27T22:09:35.8408106+07:00 0HL9LKUVG706E:00000003 [INF] The file "/admin-side/js/custom.js" was not modified (f1f8d725)
+2017-11-27T22:09:35.8530625+07:00 0HL9LKUVG706H:00000001 [INF] Request finished in 60.0028ms 304 application/javascript (791a596a)
+2017-11-27T22:09:35.9401918+07:00 0HL9LKUVG706I:00000001 [INF] Request finished in 80.5614ms 304 application/javascript (791a596a)
+2017-11-27T22:09:35.9507169+07:00 0HL9LKUVG706E:00000003 [INF] Request finished in 82.2169ms 304 application/javascript (791a596a)
+2017-11-27T22:11:58.8570782+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2017-11-27T22:11:59.3501829+07:00  [INF] Executed DbCommand ("83"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:11:59.4128907+07:00  [INF] Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:11:59.4942561+07:00  [INF] Executed DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2017-11-27T22:11:59.5629737+07:00  [INF] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2017-11-27T22:11:59.5908323+07:00  [INF] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2017-11-27T22:11:59.6218099+07:00  [INF] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2017-11-27T22:11:59.6577649+07:00  [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2017-11-27T22:11:59.7122035+07:00  [INF] Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2017-11-27T22:11:59.7457047+07:00  [INF] Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2017-11-27T22:11:59.7800462+07:00  [INF] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:11:59.8104143+07:00  [INF] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:11:59.8960674+07:00  [INF] Executed DbCommand ("23"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2017-11-27T22:12:00.4655062+07:00 0HL9LL4QKK0MI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/   (ca22a1cb)
+2017-11-27T22:12:00.5586651+07:00 0HL9LL4QKK0MI:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:12:00.9323559+07:00 0HL9LL4QKK0MI:00000001 [INF] Executing action method "SaleShopCore.Controllers.HomeController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:12:06.7993654+07:00 0HL9LL4QKK0MI:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2017-11-27T22:12:08.4874522+07:00 0HL9LL4QKK0MI:00000001 [INF] Executed action "SaleShopCore.Controllers.HomeController.Index (SaleShopCore)" in 7388.8798ms (afa2e885)
+2017-11-27T22:12:08.6114260+07:00 0HL9LL4QKK0MK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery/dist/jquery.js   (ca22a1cb)
+2017-11-27T22:12:08.6263537+07:00 0HL9LL4QKK0MI:00000001 [INF] Request finished in 8063.3039ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:12:08.7352545+07:00 0HL9LL4QKK0MK:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:12:08.9002904+07:00 0HL9LL4QKK0MK:00000001 [INF] Request finished in 207.561ms 404  (791a596a)
+2017-11-27T22:12:37.5674020+07:00 0HL9LL4QKK0MI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/login   (ca22a1cb)
+2017-11-27T22:12:37.5734337+07:00 0HL9LL4QKK0MI:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:12:37.6354919+07:00 0HL9LL4QKK0MI:00000002 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:12:38.1486078+07:00 0HL9LL4QKK0MI:00000002 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2017-11-27T22:12:38.2383218+07:00 0HL9LL4QKK0MI:00000002 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" in 615.1049ms (afa2e885)
+2017-11-27T22:12:38.2561435+07:00 0HL9LL4QKK0ML:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/shared/lukas.js   (ca22a1cb)
+2017-11-27T22:12:38.3167780+07:00 0HL9LL4QKK0MK:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/controllers/login/index.js   (ca22a1cb)
+2017-11-27T22:12:38.3349969+07:00 0HL9LL4QKK0MI:00000002 [INF] Request finished in 681.6295ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:12:38.3463272+07:00 0HL9LL4QKK0MK:00000002 [INF] The file "/app/controllers/login/index.js" was not modified (f1f8d725)
+2017-11-27T22:12:38.3493554+07:00 0HL9LL4QKK0ML:00000001 [INF] The file "/app/shared/lukas.js" was not modified (f1f8d725)
+2017-11-27T22:12:38.4030350+07:00 0HL9LL4QKK0ML:00000001 [INF] Request finished in 129.0296ms 304 application/javascript (791a596a)
+2017-11-27T22:12:38.4169684+07:00 0HL9LL4QKK0MK:00000002 [INF] Request finished in 131.1187ms 304 application/javascript (791a596a)
+2017-11-27T22:13:03.4301944+07:00 0HL9LL4QKK0MI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/login/index   (ca22a1cb)
+2017-11-27T22:13:03.4371587+07:00 0HL9LL4QKK0MI:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:13:03.4660767+07:00 0HL9LL4QKK0MI:00000003 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:13:03.4715019+07:00 0HL9LL4QKK0MI:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2017-11-27T22:13:03.4871143+07:00 0HL9LL4QKK0MI:00000003 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" in 34.8418ms (afa2e885)
+2017-11-27T22:13:03.5261360+07:00 0HL9LL4QKK0MI:00000003 [INF] Request finished in 79.7519ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:13:10.6572013+07:00 0HL9LL4QKK0ML:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44345/Admin/Login/Authen application/x-www-form-urlencoded; charset=UTF-8 34 (ca22a1cb)
+2017-11-27T22:13:10.6634258+07:00 0HL9LL4QKK0ML:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:13:10.8237319+07:00 0HL9LL4QKK0ML:00000002 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" with arguments (["SaleShopCore.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:13:14.1075474+07:00 0HL9LL4QKK0ML:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2017-11-27T22:13:15.8838352+07:00 0HL9LL4QKK0ML:00000002 [INF] Executed DbCommand ("714"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2017-11-27T22:13:16.2415785+07:00 0HL9LL4QKK0ML:00000002 [INF] Executed DbCommand ("95"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2017-11-27T22:13:16.3189090+07:00 0HL9LL4QKK0ML:00000002 [INF] Executed DbCommand ("20"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2017-11-27T22:13:16.4032612+07:00 0HL9LL4QKK0ML:00000002 [INF] Executed DbCommand ("47"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2017-11-27T22:13:16.4813251+07:00 0HL9LL4QKK0ML:00000002 [INF] Executed DbCommand ("39"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2017-11-27T22:13:16.4955236+07:00 0HL9LL4QKK0ML:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2017-11-27T22:13:16.5028832+07:00 0HL9LL4QKK0ML:00000002 [INF] User logged in. (fdce0db4)
+2017-11-27T22:13:16.5138328+07:00 0HL9LL4QKK0ML:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-27T22:13:16.5742723+07:00 0HL9LL4QKK0ML:00000002 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" in 5840.373ms (afa2e885)
+2017-11-27T22:13:16.6119179+07:00 0HL9LL4QKK0ML:00000002 [INF] Request finished in 5927.741ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-27T22:13:16.6190507+07:00 0HL9LL4QKK0MK:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/Admin/Home/Index   (ca22a1cb)
+2017-11-27T22:13:16.6248065+07:00 0HL9LL4QKK0MK:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:13:16.6502733+07:00 0HL9LL4QKK0MK:00000003 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2017-11-27T22:13:16.6883729+07:00 0HL9LL4QKK0MK:00000003 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:13:48.5006765+07:00 0HL9LL4QKK0MI:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44345/Admin/Login/Authen application/x-www-form-urlencoded; charset=UTF-8 34 (ca22a1cb)
+2017-11-27T22:13:48.5533737+07:00 0HL9LL4QKK0MI:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:13:48.6124507+07:00 0HL9LL4QKK0MI:00000004 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" with arguments (["SaleShopCore.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:13:48.6187937+07:00 0HL9LL4QKK0MI:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2017-11-27T22:13:48.7133266+07:00 0HL9LL4QKK0MI:00000004 [INF] Executed DbCommand ("61"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2017-11-27T22:13:48.8557054+07:00 0HL9LL4QKK0MI:00000004 [INF] Executed DbCommand ("93"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2017-11-27T22:13:48.9560112+07:00 0HL9LL4QKK0MI:00000004 [INF] Executed DbCommand ("84"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2017-11-27T22:13:49.0510013+07:00 0HL9LL4QKK0MI:00000004 [INF] Executed DbCommand ("62"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2017-11-27T22:13:49.1874216+07:00 0HL9LL4QKK0MI:00000004 [INF] Executed DbCommand ("118"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2017-11-27T22:13:49.2331738+07:00 0HL9LL4QKK0MI:00000004 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2017-11-27T22:13:49.2626284+07:00 0HL9LL4QKK0MI:00000004 [INF] User logged in. (fdce0db4)
+2017-11-27T22:13:49.2991111+07:00 0HL9LL4QKK0MI:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-27T22:13:49.3313716+07:00 0HL9LL4QKK0MI:00000004 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" in 745.7259ms (afa2e885)
+2017-11-27T22:13:49.3659222+07:00 0HL9LL4QKK0ML:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/Admin/Home/Index   (ca22a1cb)
+2017-11-27T22:13:49.3716635+07:00 0HL9LL4QKK0MI:00000004 [INF] Request finished in 855.9528ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-27T22:13:49.3832205+07:00 0HL9LL4QKK0ML:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:13:49.3858086+07:00 0HL9LL4QKK0MK:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2017-11-27T22:13:49.3940136+07:00 0HL9LL4QKK0ML:00000003 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2017-11-27T22:13:49.4372233+07:00 0HL9LL4QKK0ML:00000003 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:13:49.4451131+07:00 0HL9LL4QKK0ML:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2017-11-27T22:13:49.8718143+07:00 0HL9LL4QKK0MK:00000003 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" in 33194.9486ms (afa2e885)
+2017-11-27T22:13:49.8814220+07:00 0HL9LL4QKK0ML:00000003 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" in 437.5037ms (afa2e885)
+2017-11-27T22:13:49.8888426+07:00 0HL9LL4QKK0MK:00000003 [INF] Request finished in 33285.3435ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:13:49.9177691+07:00 0HL9LL4QKK0ML:00000003 [INF] Request finished in 530.1836ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:13:50.0519857+07:00 0HL9LL4QKK0MI:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/shared/lukas.js   (ca22a1cb)
+2017-11-27T22:13:50.0619300+07:00 0HL9LL4QKK0MI:00000005 [INF] The file "/app/shared/lukas.js" was not modified (f1f8d725)
+2017-11-27T22:13:50.0792380+07:00 0HL9LL4QKK0MI:00000005 [INF] Request finished in 27.5913ms 304 application/javascript (791a596a)
+2017-11-27T22:14:10.0383432+07:00 0HL9LL4QKK0ML:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/login/index   (ca22a1cb)
+2017-11-27T22:14:10.0447486+07:00 0HL9LL4QKK0ML:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:14:10.0768320+07:00 0HL9LL4QKK0ML:00000004 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:14:10.0824197+07:00 0HL9LL4QKK0ML:00000004 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2017-11-27T22:14:10.0902296+07:00 0HL9LL4QKK0ML:00000004 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" in 38.0351ms (afa2e885)
+2017-11-27T22:14:10.1268885+07:00 0HL9LL4QKK0ML:00000004 [INF] Request finished in 57.8615ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:14:13.5209768+07:00 0HL9LL4QKK0MI:00000006 [INF] Request starting HTTP/1.1 POST http://localhost:44345/Admin/Login/Authen application/x-www-form-urlencoded; charset=UTF-8 34 (ca22a1cb)
+2017-11-27T22:14:13.5363308+07:00 0HL9LL4QKK0MI:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:14:13.5814299+07:00 0HL9LL4QKK0MI:00000006 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" with arguments (["SaleShopCore.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:14:13.5867970+07:00 0HL9LL4QKK0MI:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2017-11-27T22:14:13.6276610+07:00 0HL9LL4QKK0MI:00000006 [INF] Executed DbCommand ("33"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2017-11-27T22:14:13.6988257+07:00 0HL9LL4QKK0MI:00000006 [INF] Executed DbCommand ("52"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2017-11-27T22:14:13.7590518+07:00 0HL9LL4QKK0MI:00000006 [INF] Executed DbCommand ("49"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2017-11-27T22:14:13.8051079+07:00 0HL9LL4QKK0MI:00000006 [INF] Executed DbCommand ("39"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2017-11-27T22:14:13.8571731+07:00 0HL9LL4QKK0MI:00000006 [INF] Executed DbCommand ("42"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2017-11-27T22:14:13.8630089+07:00 0HL9LL4QKK0MI:00000006 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2017-11-27T22:14:13.8676387+07:00 0HL9LL4QKK0MI:00000006 [INF] User logged in. (fdce0db4)
+2017-11-27T22:14:13.8743900+07:00 0HL9LL4QKK0MI:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-27T22:14:13.8800398+07:00 0HL9LL4QKK0MI:00000006 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" in 337.6858ms (afa2e885)
+2017-11-27T22:14:13.8950363+07:00 0HL9LL4QKK0MI:00000006 [INF] Request finished in 375.6478ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-27T22:14:13.9257432+07:00 0HL9LL4QKK0ML:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/Admin/Home/Index   (ca22a1cb)
+2017-11-27T22:14:13.9315481+07:00 0HL9LL4QKK0ML:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:14:13.9379971+07:00 0HL9LL4QKK0ML:00000005 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2017-11-27T22:14:13.9844515+07:00 0HL9LL4QKK0ML:00000005 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:14:13.9919513+07:00 0HL9LL4QKK0ML:00000005 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2017-11-27T22:14:14.0321507+07:00 0HL9LL4QKK0ML:00000005 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" in 61.4615ms (afa2e885)
+2017-11-27T22:14:14.0510179+07:00 0HL9LL4QKK0ML:00000005 [INF] Request finished in 137.1824ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:14:27.1767620+07:00 0HL9LL4QKK0MI:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44345/Admin/Home/index.html   (ca22a1cb)
+2017-11-27T22:14:27.1842800+07:00 0HL9LL4QKK0MI:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:14:27.1924867+07:00 0HL9LL4QKK0MI:00000007 [INF] Request finished in 15.6157ms 404  (791a596a)
+2017-11-27T22:14:32.4292241+07:00 0HL9LL4QKK0ML:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/login/index   (ca22a1cb)
+2017-11-27T22:14:32.4370210+07:00 0HL9LL4QKK0ML:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:14:32.4789876+07:00 0HL9LL4QKK0ML:00000006 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:14:32.4846510+07:00 0HL9LL4QKK0ML:00000006 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2017-11-27T22:14:32.5376378+07:00 0HL9LL4QKK0ML:00000006 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" in 48.182ms (afa2e885)
+2017-11-27T22:14:32.5472313+07:00 0HL9LL4QKK0ML:00000006 [INF] Request finished in 116.4086ms 200 text/html; charset=utf-8 (791a596a)
+2017-11-27T22:14:36.3501812+07:00 0HL9LL4QKK0MI:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/login/index   (ca22a1cb)
+2017-11-27T22:14:36.3556059+07:00 0HL9LL4QKK0MI:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2017-11-27T22:14:36.3959256+07:00 0HL9LL4QKK0MI:00000008 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-27T22:14:36.4012183+07:00 0HL9LL4QKK0MI:00000008 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2017-11-27T22:14:36.4452786+07:00 0HL9LL4QKK0MI:00000008 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" in 44.5795ms (afa2e885)
+2017-11-27T22:14:36.4797227+07:00 0HL9LL4QKK0MI:00000008 [INF] Request finished in 102.5458ms 200 text/html; charset=utf-8 (791a596a)
