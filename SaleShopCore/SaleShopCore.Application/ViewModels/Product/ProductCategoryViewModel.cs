@@ -1,7 +1,6 @@
-﻿using System;
+﻿using SaleShopCore.Data.Enums;
+using System;
 using System.Collections.Generic;
-using System.Text;
-using SaleShopCore.Data.Enums;
 
 namespace SaleShopCore.Application.ViewModels.Product
 {

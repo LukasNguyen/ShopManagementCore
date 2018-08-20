@@ -1,0 +1,430 @@
+2018-08-20T23:55:45.5743500+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2018-08-20T23:55:49.3250878+07:00  [INF] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-20T23:55:49.9437263+07:00  [INF] Executed DbCommand ("310"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-20T23:55:50.5700724+07:00  [INF] Executed DbCommand ("371"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-20T23:55:51.0583355+07:00  [INF] Executed DbCommand ("233"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-20T23:55:51.3023885+07:00  [INF] Executed DbCommand ("217"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-20T23:55:51.6803738+07:00  [INF] Executed DbCommand ("182"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-20T23:55:52.1003404+07:00  [INF] Executed DbCommand ("278"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-20T23:55:52.4542091+07:00  [INF] Executed DbCommand ("285"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-20T23:55:52.7847817+07:00  [INF] Executed DbCommand ("171"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-20T23:55:53.3628465+07:00  [INF] Executed DbCommand ("324"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-20T23:55:53.6348116+07:00  [INF] Executed DbCommand ("138"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-20T23:55:54.0956614+07:00  [INF] Executed DbCommand ("222"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-20T23:55:57.1141769+07:00 0HLG6NN5SMEA9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/   (ca22a1cb)
+2018-08-20T23:55:59.6935682+07:00 0HLG6NN5SMEA9:00000001 [INF] Executing action method "SaleShopCore.Controllers.HomeController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:56:11.8348281+07:00 0HLG6NN5SMEA9:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-20T23:56:16.3433148+07:00 0HLG6NN5SMEA9:00000001 [INF] Executed action "SaleShopCore.Controllers.HomeController.Index (SaleShopCore)" in 17047.1355ms (afa2e885)
+2018-08-20T23:56:16.5361086+07:00 0HLG6NN5SMEAA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-20T23:56:16.9906973+07:00 0HLG6NN5SMEA9:00000001 [INF] Request finished in 19582.6372ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-20T23:56:17.7513094+07:00 0HLG6NN5SMEAA:00000001 [INF] Request finished in 200.8512ms 404  (791a596a)
+2018-08-20T23:56:50.8867537+07:00 0HLG6NN5SMEA9:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin   (ca22a1cb)
+2018-08-20T23:56:50.9510432+07:00 0HLG6NN5SMEA9:00000002 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:56:51.7463876+07:00 0HLG6NN5SMEA9:00000002 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-20T23:56:51.8762217+07:00 0HLG6NN5SMEA9:00000002 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Index (SaleShopCore)" in 931.0461ms (afa2e885)
+2018-08-20T23:56:51.9504679+07:00 0HLG6NN5SMEAB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-20T23:56:51.9802492+07:00 0HLG6NN5SMEAC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery/jquery.js   (ca22a1cb)
+2018-08-20T23:56:52.0043190+07:00 0HLG6NN5SMEAB:00000001 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-20T23:56:52.0236063+07:00 0HLG6NN5SMEAA:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-20T23:56:52.0348881+07:00 0HLG6NN5SMEA9:00000002 [INF] Request finished in 997.673ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-20T23:56:52.0383598+07:00 0HLG6NN5SMEAA:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-20T23:56:52.0591571+07:00 0HLG6NN5SMEAC:00000001 [INF] Sending file. Request path: '"/lib/jquery/jquery.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jquery\jquery.js"' (27b0a520)
+2018-08-20T23:56:52.0699838+07:00 0HLG6NN5SMEAD:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/css/custom.css   (ca22a1cb)
+2018-08-20T23:56:52.0781626+07:00 0HLG6NN5SMEAD:00000001 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-20T23:56:52.1805146+07:00 0HLG6NN5SMEAE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-08-20T23:56:52.2341967+07:00 0HLG6NN5SMEAE:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-08-20T23:56:52.2347156+07:00 0HLG6NN5SMEAB:00000001 [INF] Request finished in 282.1628ms 200 text/css (791a596a)
+2018-08-20T23:56:52.2572000+07:00 0HLG6NN5SMEAE:00000001 [INF] Request finished in 84.0055ms 200 application/javascript (791a596a)
+2018-08-20T23:56:52.2745970+07:00 0HLG6NN5SMEAF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery-validation/localization/messages_vi.js   (ca22a1cb)
+2018-08-20T23:56:52.2836342+07:00 0HLG6NN5SMEAI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery-validation/dist/additional-methods.js   (ca22a1cb)
+2018-08-20T23:56:52.3024604+07:00 0HLG6NN5SMEAH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/shared/lukas.js   (ca22a1cb)
+2018-08-20T23:56:52.3190907+07:00 0HLG6NN5SMEAH:00000001 [INF] Sending file. Request path: '"/app/shared/lukas.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\shared\lukas.js"' (27b0a520)
+2018-08-20T23:56:52.3369586+07:00 0HLG6NN5SMEAF:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/localization/messages_vi.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jquery-validation\localization\messages_vi.js"' (27b0a520)
+2018-08-20T23:56:52.3525824+07:00 0HLG6NN5SMEAI:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/additional-methods.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jquery-validation\dist\additional-methods.js"' (27b0a520)
+2018-08-20T23:56:52.4312213+07:00 0HLG6NN5SMEAF:00000001 [INF] Request finished in 193.2265ms 200 application/javascript (791a596a)
+2018-08-20T23:56:52.4706603+07:00 0HLG6NN5SMEAG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-20T23:56:52.4764940+07:00 0HLG6NN5SMEAH:00000001 [INF] Request finished in 113.2982ms 200 application/javascript (791a596a)
+2018-08-20T23:56:52.4792562+07:00 0HLG6NN5SMEAI:00000001 [INF] Request finished in 90.536ms 200 application/javascript (791a596a)
+2018-08-20T23:56:52.4927388+07:00 0HLG6NN5SMEAJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-08-20T23:56:52.4982369+07:00 0HLG6NN5SMEAG:00000001 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-20T23:56:52.5150269+07:00 0HLG6NN5SMEAG:00000001 [INF] Request finished in 211.69ms 200 text/css (791a596a)
+2018-08-20T23:56:52.5477124+07:00 0HLG6NN5SMEAM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-08-20T23:56:52.5628343+07:00 0HLG6NN5SMEAK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-20T23:56:52.5810831+07:00 0HLG6NN5SMEAJ:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2018-08-20T23:56:52.6137357+07:00 0HLG6NN5SMEAL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-20T23:56:52.6233110+07:00 0HLG6NN5SMEAM:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-08-20T23:56:52.6770587+07:00 0HLG6NN5SMEAL:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2018-08-20T23:56:52.6771220+07:00 0HLG6NN5SMEAK:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-20T23:56:52.8065846+07:00 0HLG6NN5SMEAM:00000001 [INF] Request finished in 124.8877ms 200 application/javascript (791a596a)
+2018-08-20T23:56:52.8569828+07:00 0HLG6NN5SMEAK:00000001 [INF] Request finished in 214.1417ms 200 application/javascript (791a596a)
+2018-08-20T23:56:52.9029712+07:00 0HLG6NN5SMEAJ:00000001 [INF] Request finished in 161.7697ms 200 text/css (791a596a)
+2018-08-20T23:56:53.0565854+07:00 0HLG6NN5SMEAA:00000002 [INF] Request finished in 1094.0616ms 200 text/css (791a596a)
+2018-08-20T23:56:53.1621623+07:00 0HLG6NN5SMEAD:00000001 [INF] Request finished in 871.4686ms 200 text/css (791a596a)
+2018-08-20T23:56:53.1721464+07:00 0HLG6NN5SMEAN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/controllers/login/index.js   (ca22a1cb)
+2018-08-20T23:56:53.1791145+07:00 0HLG6NN5SMEA9:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-20T23:56:53.2229993+07:00 0HLG6NN5SMEAL:00000001 [INF] Request finished in 308.5283ms 200 application/javascript (791a596a)
+2018-08-20T23:56:53.2608760+07:00 0HLG6NN5SMEAC:00000001 [INF] Request finished in 1305.785ms 200 application/javascript (791a596a)
+2018-08-20T23:56:53.3040335+07:00 0HLG6NN5SMEA9:00000003 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-20T23:56:53.3475569+07:00 0HLG6NN5SMEAN:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-20T23:56:53.4084169+07:00 0HLG6NN5SMEAN:00000001 [INF] Request finished in 584.5551ms 200 application/javascript (791a596a)
+2018-08-20T23:56:53.4740096+07:00 0HLG6NN5SMEA9:00000003 [INF] Request finished in 239.3945ms 200 font/woff2 (791a596a)
+2018-08-20T23:57:03.4412455+07:00 0HLG6NN5SMEAB:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44345/Admin/Login/Authen application/x-www-form-urlencoded; charset=UTF-8 34 (ca22a1cb)
+2018-08-20T23:57:03.7112072+07:00 0HLG6NN5SMEAB:00000002 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" with arguments (["SaleShopCore.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:57:03.7869045+07:00 0HLG6NN5SMEAB:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2018-08-20T23:57:04.1215908+07:00 0HLG6NN5SMEAB:00000002 [INF] Executed DbCommand ("211"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-20T23:57:04.5154526+07:00 0HLG6NN5SMEAB:00000002 [INF] Executed DbCommand ("145"ms) [Parameters=["@__user_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-20T23:57:04.9076727+07:00 0HLG6NN5SMEAB:00000002 [INF] Executed DbCommand ("269"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-20T23:57:05.0119688+07:00 0HLG6NN5SMEAB:00000002 [INF] Executed DbCommand ("71"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-20T23:57:05.1322752+07:00 0HLG6NN5SMEAB:00000002 [INF] Executed DbCommand ("72"ms) [Parameters=["@__role_Id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-20T23:57:05.2073053+07:00 0HLG6NN5SMEAB:00000002 [INF] Executed DbCommand ("57"ms) [Parameters=["@__userId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-20T23:57:05.2257709+07:00 0HLG6NN5SMEAB:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-08-20T23:57:05.2329180+07:00 0HLG6NN5SMEAB:00000002 [INF] User logged in. (fdce0db4)
+2018-08-20T23:57:05.2480207+07:00 0HLG6NN5SMEAB:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-20T23:57:05.3196801+07:00 0HLG6NN5SMEAB:00000002 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.LoginController.Authen (SaleShopCore)" in 1783.0665ms (afa2e885)
+2018-08-20T23:57:05.3309111+07:00 0HLG6NN5SMEAB:00000002 [INF] Request finished in 1890.0997ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-20T23:57:05.3478809+07:00 0HLG6NN5SMEAE:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/Admin/Home/Index   (ca22a1cb)
+2018-08-20T23:57:05.3598056+07:00 0HLG6NN5SMEAE:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-20T23:57:05.3810540+07:00 0HLG6NN5SMEAE:00000002 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2018-08-20T23:57:05.4495366+07:00 0HLG6NN5SMEAE:00000002 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:57:05.7513389+07:00 0HLG6NN5SMEAE:00000002 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-20T23:57:06.3210943+07:00 0HLG6NN5SMEAE:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2018-08-20T23:57:06.5626488+07:00 0HLG6NN5SMEAE:00000002 [INF] Executed DbCommand ("171"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]" (0723d8ff)
+2018-08-20T23:57:07.6560377+07:00 0HLG6NN5SMEAE:00000002 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.HomeController.Index (SaleShopCore)" in 2248.193ms (afa2e885)
+2018-08-20T23:57:07.6925837+07:00 0HLG6NN5SMEAE:00000002 [INF] Request finished in 2319.0449ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-20T23:57:07.7235199+07:00 0HLG6NN5SMEAH:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2018-08-20T23:57:07.7297428+07:00 0HLG6NN5SMEAF:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-08-20T23:57:07.7346892+07:00 0HLG6NN5SMEAH:00000002 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2018-08-20T23:57:07.7528021+07:00 0HLG6NN5SMEAF:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2018-08-20T23:57:07.8599821+07:00 0HLG6NN5SMEAH:00000002 [INF] Request finished in 65.1999ms 200 text/css (791a596a)
+2018-08-20T23:57:07.9767577+07:00 0HLG6NN5SMEAG:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/nprogress/nprogress.js   (ca22a1cb)
+2018-08-20T23:57:07.9914801+07:00 0HLG6NN5SMEAI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/fastclick/lib/fastclick.js   (ca22a1cb)
+2018-08-20T23:57:08.1080585+07:00 0HLG6NN5SMEAJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery-sparkline/dist/jquery.sparkline.js   (ca22a1cb)
+2018-08-20T23:57:08.1306067+07:00 0HLG6NN5SMEAF:00000002 [INF] Request finished in 175.2598ms 200 application/javascript (791a596a)
+2018-08-20T23:57:08.1678270+07:00 0HLG6NN5SMEAI:00000002 [INF] Sending file. Request path: '"/lib/fastclick/lib/fastclick.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\fastclick\lib\fastclick.js"' (27b0a520)
+2018-08-20T23:57:08.1699701+07:00 0HLG6NN5SMEAG:00000002 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\nprogress\nprogress.js"' (27b0a520)
+2018-08-20T23:57:08.1766387+07:00 0HLG6NN5SMEAD:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/images/img.jpg   (ca22a1cb)
+2018-08-20T23:57:08.1993734+07:00 0HLG6NN5SMEAJ:00000002 [INF] Sending file. Request path: '"/lib/jquery-sparkline/dist/jquery.sparkline.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jquery-sparkline\dist\jquery.sparkline.js"' (27b0a520)
+2018-08-20T23:57:08.2238770+07:00 0HLG6NN5SMEAM:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/twbs-pagination/jquery.twbsPagination.js   (ca22a1cb)
+2018-08-20T23:57:08.3577371+07:00 0HLG6NN5SMEAK:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/Chart.js/dist/Chart.js   (ca22a1cb)
+2018-08-20T23:57:08.3730338+07:00 0HLG6NN5SMEAD:00000002 [INF] Sending file. Request path: '"/admin-side/images/img.jpg"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\admin-side\images\img.jpg"' (27b0a520)
+2018-08-20T23:57:08.3790804+07:00 0HLG6NN5SMEAL:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2018-08-20T23:57:08.3901990+07:00 0HLG6NN5SMEAG:00000002 [INF] Request finished in 418.9623ms 200 application/javascript (791a596a)
+2018-08-20T23:57:08.3947283+07:00 0HLG6NN5SMEAC:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap-daterangepicker/daterangepicker.js   (ca22a1cb)
+2018-08-20T23:57:08.4087796+07:00 0HLG6NN5SMEAM:00000002 [INF] Sending file. Request path: '"/lib/twbs-pagination/jquery.twbsPagination.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\twbs-pagination\jquery.twbsPagination.js"' (27b0a520)
+2018-08-20T23:57:08.4681162+07:00 0HLG6NN5SMEAK:00000002 [INF] Sending file. Request path: '"/lib/Chart.js/dist/Chart.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\Chart.js\dist\Chart.js"' (27b0a520)
+2018-08-20T23:57:08.5431263+07:00 0HLG6NN5SMEAJ:00000002 [INF] Request finished in 422.1844ms 200 application/javascript (791a596a)
+2018-08-20T23:57:08.5806805+07:00 0HLG6NN5SMEAC:00000002 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.js"' (27b0a520)
+2018-08-20T23:57:08.6228500+07:00 0HLG6NN5SMEAM:00000002 [INF] Request finished in 616.8032ms 200 application/javascript (791a596a)
+2018-08-20T23:57:08.6805232+07:00 0HLG6NN5SMEAD:00000002 [INF] Request finished in 385.819ms 200 image/jpeg (791a596a)
+2018-08-20T23:57:08.7138724+07:00 0HLG6NN5SMEA9:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/mustache.js/mustache.js   (ca22a1cb)
+2018-08-20T23:57:08.7586551+07:00 0HLG6NN5SMEAA:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/moment/moment.js   (ca22a1cb)
+2018-08-20T23:57:08.8550633+07:00 0HLG6NN5SMEAN:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootbox.js/bootbox.js   (ca22a1cb)
+2018-08-20T23:57:09.0456879+07:00 0HLG6NN5SMEA9:00000004 [INF] Sending file. Request path: '"/lib/mustache.js/mustache.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\mustache.js\mustache.js"' (27b0a520)
+2018-08-20T23:57:09.0649817+07:00 0HLG6NN5SMEAB:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/js/custom.js   (ca22a1cb)
+2018-08-20T23:57:09.0811248+07:00 0HLG6NN5SMEAN:00000002 [INF] Sending file. Request path: '"/lib/bootbox.js/bootbox.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootbox.js\bootbox.js"' (27b0a520)
+2018-08-20T23:57:09.1197407+07:00 0HLG6NN5SMEAL:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2018-08-20T23:57:09.2659954+07:00 0HLG6NN5SMEAB:00000003 [INF] Sending file. Request path: '"/admin-side/js/custom.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\admin-side\js\custom.js"' (27b0a520)
+2018-08-20T23:57:09.2890758+07:00 0HLG6NN5SMEAK:00000002 [INF] Request finished in 1004.1047ms 200 application/javascript (791a596a)
+2018-08-20T23:57:09.2939969+07:00 0HLG6NN5SMEAA:00000003 [INF] Sending file. Request path: '"/lib/moment/moment.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\moment\moment.js"' (27b0a520)
+2018-08-20T23:57:09.3042925+07:00 0HLG6NN5SMEAC:00000002 [INF] Request finished in 388.9912ms 200 application/javascript (791a596a)
+2018-08-20T23:57:09.3409388+07:00 0HLG6NN5SMEA9:00000004 [INF] Request finished in 716.9878ms 200 application/javascript (791a596a)
+2018-08-20T23:57:09.3516102+07:00 0HLG6NN5SMEAI:00000002 [INF] Request finished in 544.1707ms 200 application/javascript (791a596a)
+2018-08-20T23:57:09.3611248+07:00 0HLG6NN5SMEAN:00000002 [INF] Request finished in 858.9347ms 200 application/javascript (791a596a)
+2018-08-20T23:57:09.3851579+07:00 0HLG6NN5SMEAL:00000002 [INF] Request finished in 1433.1543ms 200 font/woff2 (791a596a)
+2018-08-20T23:57:09.4044040+07:00 0HLG6NN5SMEAB:00000003 [INF] Request finished in 499.3602ms 200 application/javascript (791a596a)
+2018-08-20T23:57:09.5238981+07:00 0HLG6NN5SMEAA:00000003 [INF] Request finished in 1080.3925ms 200 application/javascript (791a596a)
+2018-08-20T23:57:12.5105877+07:00 0HLG6NN5SMEAE:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/productcategory/index   (ca22a1cb)
+2018-08-20T23:57:12.5354588+07:00 0HLG6NN5SMEAE:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-20T23:57:12.5747912+07:00 0HLG6NN5SMEAE:00000003 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2018-08-20T23:57:12.6435507+07:00 0HLG6NN5SMEAE:00000003 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:57:13.0628383+07:00 0HLG6NN5SMEAE:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-20T23:57:13.1041933+07:00 0HLG6NN5SMEAE:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2018-08-20T23:57:13.2163657+07:00 0HLG6NN5SMEAE:00000003 [INF] Executed DbCommand ("98"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]" (0723d8ff)
+2018-08-20T23:57:13.2697150+07:00 0HLG6NN5SMEAE:00000003 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.Index (SaleShopCore)" in 692.9149ms (afa2e885)
+2018-08-20T23:57:13.3212410+07:00 0HLG6NN5SMEAF:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jQuery-EasyUI/themes/bootstrap/easyui.css   (ca22a1cb)
+2018-08-20T23:57:13.3321329+07:00 0HLG6NN5SMEAE:00000003 [INF] Request finished in 785.6788ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-20T23:57:13.3545283+07:00 0HLG6NN5SMEAF:00000003 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/bootstrap/easyui.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jQuery-EasyUI\themes\bootstrap\easyui.css"' (27b0a520)
+2018-08-20T23:57:13.3588439+07:00 0HLG6NN5SMEAH:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jQuery-EasyUI/themes/icon.css   (ca22a1cb)
+2018-08-20T23:57:13.4071872+07:00 0HLG6NN5SMEAH:00000003 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/icon.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jQuery-EasyUI\themes\icon.css"' (27b0a520)
+2018-08-20T23:57:13.4426096+07:00 0HLG6NN5SMEAF:00000003 [INF] Request finished in 104.2188ms 200 text/css (791a596a)
+2018-08-20T23:57:13.4797337+07:00 0HLG6NN5SMEAH:00000003 [INF] Request finished in 146.2453ms 200 text/css (791a596a)
+2018-08-20T23:57:13.4892941+07:00 0HLG6NN5SMEAI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/shared/lukas.js   (ca22a1cb)
+2018-08-20T23:57:13.5352026+07:00 0HLG6NN5SMEAJ:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jQuery-EasyUI/jquery.easyui.min.js   (ca22a1cb)
+2018-08-20T23:57:13.5654056+07:00 0HLG6NN5SMEAG:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/controllers/product-category/index.js   (ca22a1cb)
+2018-08-20T23:57:13.5676681+07:00 0HLG6NN5SMEAI:00000003 [INF] The file "/app/shared/lukas.js" was not modified (f1f8d725)
+2018-08-20T23:57:13.6566954+07:00 0HLG6NN5SMEAI:00000003 [INF] Request finished in 166.0461ms 304 application/javascript (791a596a)
+2018-08-20T23:57:13.6592262+07:00 0HLG6NN5SMEAJ:00000003 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/jquery.easyui.min.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jQuery-EasyUI\jquery.easyui.min.js"' (27b0a520)
+2018-08-20T23:57:13.6988430+07:00 0HLG6NN5SMEAG:00000003 [INF] Sending file. Request path: '"/app/controllers/product-category/index.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\controllers\product-category\index.js"' (27b0a520)
+2018-08-20T23:57:14.0312440+07:00 0HLG6NN5SMEAG:00000003 [INF] Request finished in 253.5125ms 200 application/javascript (791a596a)
+2018-08-20T23:57:14.1412184+07:00 0HLG6NN5SMEAJ:00000003 [INF] Request finished in 300.7388ms 200 application/javascript (791a596a)
+2018-08-20T23:57:14.1737893+07:00 0HLG6NN5SMEAD:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/Admin/ProductCategory/GetAll   (ca22a1cb)
+2018-08-20T23:57:14.2122330+07:00 0HLG6NN5SMEAD:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-20T23:57:14.3720429+07:00 0HLG6NN5SMEAD:00000003 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2018-08-20T23:57:14.5278369+07:00 0HLG6NN5SMEAD:00000003 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.GetAll (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:57:14.5470363+07:00 0HLG6NN5SMEAD:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2018-08-20T23:57:14.8032403+07:00 0HLG6NN5SMEAD:00000003 [INF] Executed DbCommand ("161"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [n].[Id], [n].[Name], [n].[Description], [n].[ParentId], [n].[HomeOrder], [n].[Image], [n].[HomeFlag], [n].[SeoPageTitle], [n].[SeoAlias], [n].[SeoKeywords], [n].[SeoDescription], [n].[Status], [n].[SortOrder], [n].[DateCreated], [n].[DateModified]
+FROM [ProductCategories] AS [n]
+ORDER BY [n].[ParentId]" (0723d8ff)
+2018-08-20T23:57:14.9608283+07:00 0HLG6NN5SMEAD:00000003 [INF] Executed DbCommand ("120"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:57:15.0403053+07:00 0HLG6NN5SMEAD:00000003 [INF] Executed DbCommand ("58"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:57:15.1298344+07:00 0HLG6NN5SMEAD:00000003 [INF] Executed DbCommand ("70"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:57:15.1988038+07:00 0HLG6NN5SMEAD:00000003 [INF] Executed DbCommand ("59"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:57:15.2081080+07:00 0HLG6NN5SMEAD:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-20T23:57:15.2882938+07:00 0HLG6NN5SMEAD:00000003 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.GetAll (SaleShopCore)" in 1060.9647ms (afa2e885)
+2018-08-20T23:57:15.3616767+07:00 0HLG6NN5SMEAD:00000003 [INF] Request finished in 1161.3811ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-20T23:57:15.3939840+07:00 0HLG6NN5SMEAM:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jQuery-EasyUI/themes/bootstrap/images/tree_icons.png   (ca22a1cb)
+2018-08-20T23:57:15.4019965+07:00 0HLG6NN5SMEAM:00000003 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/bootstrap/images/tree_icons.png"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jQuery-EasyUI\themes\bootstrap\images\tree_icons.png"' (27b0a520)
+2018-08-20T23:57:15.4246139+07:00 0HLG6NN5SMEAM:00000003 [INF] Request finished in 48.7272ms 200 image/png (791a596a)
+2018-08-20T23:57:34.6889687+07:00 0HLG6NN5SMEAC:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/productcategory/index   (ca22a1cb)
+2018-08-20T23:57:34.6957610+07:00 0HLG6NN5SMEAC:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-20T23:57:34.7032037+07:00 0HLG6NN5SMEAC:00000003 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2018-08-20T23:57:34.7555704+07:00 0HLG6NN5SMEAC:00000003 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:57:34.7623391+07:00 0HLG6NN5SMEAC:00000003 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-20T23:57:34.7702101+07:00 0HLG6NN5SMEAC:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2018-08-20T23:57:34.8487295+07:00 0HLG6NN5SMEAC:00000003 [INF] Executed DbCommand ("70"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]" (0723d8ff)
+2018-08-20T23:57:34.8706711+07:00 0HLG6NN5SMEAC:00000003 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.Index (SaleShopCore)" in 156.6474ms (afa2e885)
+2018-08-20T23:57:34.9479799+07:00 0HLG6NN5SMEAC:00000003 [INF] Request finished in 190.7268ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-20T23:57:35.0342918+07:00 0HLG6NN5SMEAE:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jQuery-EasyUI/themes/bootstrap/easyui.css   (ca22a1cb)
+2018-08-20T23:57:35.0952256+07:00 0HLG6NN5SMEA9:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-20T23:57:35.0982826+07:00 0HLG6NN5SMEAB:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-08-20T23:57:35.1203603+07:00 0HLG6NN5SMEAF:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery/jquery.js   (ca22a1cb)
+2018-08-20T23:57:35.1400499+07:00 0HLG6NN5SMEAE:00000004 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/bootstrap/easyui.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jQuery-EasyUI\themes\bootstrap\easyui.css"' (27b0a520)
+2018-08-20T23:57:35.1505597+07:00 0HLG6NN5SMEAL:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-20T23:57:35.1591779+07:00 0HLG6NN5SMEAK:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-20T23:57:35.1851668+07:00 0HLG6NN5SMEA9:00000005 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-20T23:57:35.1971228+07:00 0HLG6NN5SMEAB:00000004 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2018-08-20T23:57:35.2064324+07:00 0HLG6NN5SMEAF:00000004 [INF] Sending file. Request path: '"/lib/jquery/jquery.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jquery\jquery.js"' (27b0a520)
+2018-08-20T23:57:35.2400130+07:00 0HLG6NN5SMEAH:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jQuery-EasyUI/themes/icon.css   (ca22a1cb)
+2018-08-20T23:57:35.2599950+07:00 0HLG6NN5SMEAL:00000003 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-20T23:57:35.2876574+07:00 0HLG6NN5SMEAK:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-20T23:57:35.3073897+07:00 0HLG6NN5SMEAA:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/css/custom.css   (ca22a1cb)
+2018-08-20T23:57:35.3558793+07:00 0HLG6NN5SMEAE:00000004 [INF] Request finished in 247.4363ms 200 text/css (791a596a)
+2018-08-20T23:57:35.3678460+07:00 0HLG6NN5SMEAH:00000004 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/icon.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jQuery-EasyUI\themes\icon.css"' (27b0a520)
+2018-08-20T23:57:35.3774868+07:00 0HLG6NN5SMEAN:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2018-08-20T23:57:35.3956172+07:00 0HLG6NN5SMEA9:00000005 [INF] Request finished in 363.2284ms 200 text/css (791a596a)
+2018-08-20T23:57:35.4142380+07:00 0HLG6NN5SMEAB:00000004 [INF] Request finished in 338.5599ms 200 text/css (791a596a)
+2018-08-20T23:57:35.4444871+07:00 0HLG6NN5SMEAL:00000003 [INF] Request finished in 303.7113ms 200 text/css (791a596a)
+2018-08-20T23:57:35.4656320+07:00 0HLG6NN5SMEAA:00000004 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-20T23:57:35.4779342+07:00 0HLG6NN5SMEAH:00000004 [INF] Request finished in 378.8592ms 200 text/css (791a596a)
+2018-08-20T23:57:35.5478492+07:00 0HLG6NN5SMEAN:00000003 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2018-08-20T23:57:35.5554239+07:00 0HLG6NN5SMEAF:00000004 [INF] Request finished in 408.9238ms 200 application/javascript (791a596a)
+2018-08-20T23:57:35.6065839+07:00 0HLG6NN5SMEAK:00000003 [INF] Request finished in 423.6093ms 200 text/css (791a596a)
+2018-08-20T23:57:35.6304379+07:00 0HLG6NN5SMEAA:00000004 [INF] Request finished in 499.8046ms 200 text/css (791a596a)
+2018-08-20T23:57:35.6443929+07:00 0HLG6NN5SMEAI:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-08-20T23:57:35.6882635+07:00 0HLG6NN5SMEAM:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/Chart.js/dist/Chart.js   (ca22a1cb)
+2018-08-20T23:57:35.7113564+07:00 0HLG6NN5SMEAD:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jquery-sparkline/dist/jquery.sparkline.js   (ca22a1cb)
+2018-08-20T23:57:35.7169352+07:00 0HLG6NN5SMEAC:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/twbs-pagination/jquery.twbsPagination.js   (ca22a1cb)
+2018-08-20T23:57:35.7221725+07:00 0HLG6NN5SMEA9:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2018-08-20T23:57:35.7290461+07:00 0HLG6NN5SMEAI:00000004 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2018-08-20T23:57:35.7357171+07:00 0HLG6NN5SMEAJ:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/fastclick/lib/fastclick.js   (ca22a1cb)
+2018-08-20T23:57:35.7702392+07:00 0HLG6NN5SMEAM:00000004 [INF] Sending file. Request path: '"/lib/Chart.js/dist/Chart.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\Chart.js\dist\Chart.js"' (27b0a520)
+2018-08-20T23:57:35.7948114+07:00 0HLG6NN5SMEAD:00000004 [INF] Sending file. Request path: '"/lib/jquery-sparkline/dist/jquery.sparkline.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jquery-sparkline\dist\jquery.sparkline.js"' (27b0a520)
+2018-08-20T23:57:35.8039894+07:00 0HLG6NN5SMEAC:00000004 [INF] Sending file. Request path: '"/lib/twbs-pagination/jquery.twbsPagination.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\twbs-pagination\jquery.twbsPagination.js"' (27b0a520)
+2018-08-20T23:57:35.8147790+07:00 0HLG6NN5SMEA9:00000006 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2018-08-20T23:57:35.8226705+07:00 0HLG6NN5SMEAJ:00000004 [INF] Sending file. Request path: '"/lib/fastclick/lib/fastclick.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\fastclick\lib\fastclick.js"' (27b0a520)
+2018-08-20T23:57:35.8340564+07:00 0HLG6NN5SMEAN:00000003 [INF] Request finished in 623.2476ms 200 text/css (791a596a)
+2018-08-20T23:57:35.9278240+07:00 0HLG6NN5SMEAI:00000004 [INF] Request finished in 248.6792ms 200 application/javascript (791a596a)
+2018-08-20T23:57:35.9464757+07:00 0HLG6NN5SMEAG:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/nprogress/nprogress.js   (ca22a1cb)
+2018-08-20T23:57:35.9895686+07:00 0HLG6NN5SMEAC:00000004 [INF] Request finished in 239.2256ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.0003608+07:00 0HLG6NN5SMEA9:00000006 [INF] Request finished in 274.4135ms 200 font/woff2 (791a596a)
+2018-08-20T23:57:36.0139362+07:00 0HLG6NN5SMEAL:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/moment/moment.js   (ca22a1cb)
+2018-08-20T23:57:36.0180490+07:00 0HLG6NN5SMEAJ:00000004 [INF] Request finished in 300.9523ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.0554187+07:00 0HLG6NN5SMEAM:00000004 [INF] Request finished in 373.1293ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.0675085+07:00 0HLG6NN5SMEAG:00000004 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\nprogress\nprogress.js"' (27b0a520)
+2018-08-20T23:57:36.0756821+07:00 0HLG6NN5SMEAE:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-20T23:57:36.0885782+07:00 0HLG6NN5SMEAH:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-20T23:57:36.1297950+07:00 0HLG6NN5SMEAL:00000004 [INF] Sending file. Request path: '"/lib/moment/moment.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\moment\moment.js"' (27b0a520)
+2018-08-20T23:57:36.1617938+07:00 0HLG6NN5SMEAF:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootstrap-daterangepicker/daterangepicker.js   (ca22a1cb)
+2018-08-20T23:57:36.1794146+07:00 0HLG6NN5SMEAH:00000005 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-20T23:57:36.1858486+07:00 0HLG6NN5SMEAK:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-20T23:57:36.2319992+07:00 0HLG6NN5SMEAE:00000005 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-20T23:57:36.2786583+07:00 0HLG6NN5SMEAG:00000004 [INF] Request finished in 533.8627ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.3650652+07:00 0HLG6NN5SMEAK:00000004 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2018-08-20T23:57:36.3813813+07:00 0HLG6NN5SMEAA:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/bootbox.js/bootbox.js   (ca22a1cb)
+2018-08-20T23:57:36.4059319+07:00 0HLG6NN5SMEAN:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/mustache.js/mustache.js   (ca22a1cb)
+2018-08-20T23:57:36.4390592+07:00 0HLG6NN5SMEAL:00000004 [INF] Request finished in 337.0472ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.4722390+07:00 0HLG6NN5SMEAH:00000005 [INF] Request finished in 252.5194ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.4792468+07:00 0HLG6NN5SMEAA:00000005 [INF] Sending file. Request path: '"/lib/bootbox.js/bootbox.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootbox.js\bootbox.js"' (27b0a520)
+2018-08-20T23:57:36.5043875+07:00 0HLG6NN5SMEAN:00000004 [INF] Sending file. Request path: '"/lib/mustache.js/mustache.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\mustache.js\mustache.js"' (27b0a520)
+2018-08-20T23:57:36.5231228+07:00 0HLG6NN5SMEAC:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/js/custom.js   (ca22a1cb)
+2018-08-20T23:57:36.5481209+07:00 0HLG6NN5SMEAK:00000004 [INF] Request finished in 352.0055ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.5638942+07:00 0HLG6NN5SMEAA:00000005 [INF] Request finished in 244.7007ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.5933349+07:00 0HLG6NN5SMEA9:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/controllers/product-category/index.js   (ca22a1cb)
+2018-08-20T23:57:36.6077034+07:00 0HLG6NN5SMEAC:00000005 [INF] Sending file. Request path: '"/admin-side/js/custom.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\admin-side\js\custom.js"' (27b0a520)
+2018-08-20T23:57:36.6153985+07:00 0HLG6NN5SMEAI:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/shared/lukas.js   (ca22a1cb)
+2018-08-20T23:57:36.6301111+07:00 0HLG6NN5SMEAJ:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/lib/jQuery-EasyUI/jquery.easyui.min.js   (ca22a1cb)
+2018-08-20T23:57:36.6434603+07:00 0HLG6NN5SMEAN:00000004 [INF] Request finished in 320.5516ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.6701321+07:00 0HLG6NN5SMEAE:00000005 [INF] Request finished in 694.967ms 200 font/woff2 (791a596a)
+2018-08-20T23:57:36.6789482+07:00 0HLG6NN5SMEAD:00000004 [INF] Request finished in 301.6791ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.6868048+07:00 0HLG6NN5SMEA9:00000007 [INF] Sending file. Request path: '"/app/controllers/product-category/index.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\controllers\product-category\index.js"' (27b0a520)
+2018-08-20T23:57:36.7095046+07:00 0HLG6NN5SMEAI:00000005 [INF] Sending file. Request path: '"/app/shared/lukas.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\shared\lukas.js"' (27b0a520)
+2018-08-20T23:57:36.7248508+07:00 0HLG6NN5SMEAF:00000005 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.js"' (27b0a520)
+2018-08-20T23:57:36.7492898+07:00 0HLG6NN5SMEAC:00000005 [INF] Request finished in 247.2117ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.7853952+07:00 0HLG6NN5SMEAJ:00000005 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/jquery.easyui.min.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\lib\jQuery-EasyUI\jquery.easyui.min.js"' (27b0a520)
+2018-08-20T23:57:36.8204323+07:00 0HLG6NN5SMEAI:00000005 [INF] Request finished in 328.2379ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.8284003+07:00 0HLG6NN5SMEAB:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin-side/images/img.jpg   (ca22a1cb)
+2018-08-20T23:57:36.8485876+07:00 0HLG6NN5SMEA9:00000007 [INF] Request finished in 217.9733ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.8593509+07:00 0HLG6NN5SMEAF:00000005 [INF] Request finished in 848.2585ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.8734142+07:00 0HLG6NN5SMEAB:00000005 [INF] Sending file. Request path: '"/admin-side/images/img.jpg"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\admin-side\images\img.jpg"' (27b0a520)
+2018-08-20T23:57:36.9495938+07:00 0HLG6NN5SMEAJ:00000005 [INF] Request finished in 367.6051ms 200 application/javascript (791a596a)
+2018-08-20T23:57:36.9833923+07:00 0HLG6NN5SMEAB:00000005 [INF] Request finished in 1218.4192ms 200 image/jpeg (791a596a)
+2018-08-20T23:57:37.0025402+07:00 0HLG6NN5SMEAD:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/Admin/ProductCategory/GetAll   (ca22a1cb)
+2018-08-20T23:57:37.0118807+07:00 0HLG6NN5SMEAD:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-20T23:57:37.0260753+07:00 0HLG6NN5SMEAD:00000005 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2018-08-20T23:57:37.0906986+07:00 0HLG6NN5SMEAD:00000005 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.GetAll (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:57:37.1092059+07:00 0HLG6NN5SMEAD:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2018-08-20T23:57:37.1960871+07:00 0HLG6NN5SMEAD:00000005 [INF] Executed DbCommand ("69"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [n].[Id], [n].[Name], [n].[Description], [n].[ParentId], [n].[HomeOrder], [n].[Image], [n].[HomeFlag], [n].[SeoPageTitle], [n].[SeoAlias], [n].[SeoKeywords], [n].[SeoDescription], [n].[Status], [n].[SortOrder], [n].[DateCreated], [n].[DateModified]
+FROM [ProductCategories] AS [n]
+ORDER BY [n].[ParentId]" (0723d8ff)
+2018-08-20T23:57:37.2904974+07:00 0HLG6NN5SMEAD:00000005 [INF] Executed DbCommand ("80"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:57:37.3794407+07:00 0HLG6NN5SMEAD:00000005 [INF] Executed DbCommand ("75"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:57:37.4891503+07:00 0HLG6NN5SMEAD:00000005 [INF] Executed DbCommand ("96"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:57:37.5686681+07:00 0HLG6NN5SMEAD:00000005 [INF] Executed DbCommand ("69"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:57:37.5802058+07:00 0HLG6NN5SMEAD:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-20T23:57:37.5959843+07:00 0HLG6NN5SMEAD:00000005 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.GetAll (SaleShopCore)" in 568.6206ms (afa2e885)
+2018-08-20T23:57:37.6100124+07:00 0HLG6NN5SMEAD:00000005 [INF] Request finished in 608.4655ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-20T23:58:24.9615675+07:00 0HLG6NN5SMEAM:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/admin/productcategory/index   (ca22a1cb)
+2018-08-20T23:58:24.9929620+07:00 0HLG6NN5SMEAM:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-20T23:58:25.0678209+07:00 0HLG6NN5SMEAM:00000005 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2018-08-20T23:58:25.1364004+07:00 0HLG6NN5SMEAM:00000005 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.Index (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:58:25.6468256+07:00 0HLG6NN5SMEAM:00000005 [INF] Executing ViewResult, running view at path "/Areas/Admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-20T23:58:25.7845567+07:00 0HLG6NN5SMEAM:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2018-08-20T23:58:25.8870455+07:00 0HLG6NN5SMEAM:00000005 [INF] Executed DbCommand ("87"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[URL], [dto].[ParentId], [dto].[IconCss], [dto].[SortOrder], [dto].[Status]
+FROM [Functions] AS [dto]" (0723d8ff)
+2018-08-20T23:58:26.0504372+07:00 0HLG6NN5SMEAM:00000005 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.Index (SaleShopCore)" in 914.0996ms (afa2e885)
+2018-08-20T23:58:26.1272301+07:00 0HLG6NN5SMEAL:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/shared/lukas.js   (ca22a1cb)
+2018-08-20T23:58:26.2210101+07:00 0HLG6NN5SMEAG:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44345/app/controllers/product-category/index.js?v=W9MOW86TRPCYb4j2rLad0q8wJSf5co9lINe3cZSCxVw   (ca22a1cb)
+2018-08-20T23:58:26.3272714+07:00 0HLG6NN5SMEAM:00000005 [INF] Request finished in 1178.4665ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-20T23:58:26.3479144+07:00 0HLG6NN5SMEAL:00000005 [INF] The file "/app/shared/lukas.js" was not modified (f1f8d725)
+2018-08-20T23:58:26.3811980+07:00 0HLG6NN5SMEAG:00000005 [INF] Sending file. Request path: '"/app/controllers/product-category/index.js"'. Physical path: '"E:\HK1-Nam4\WEB_TuHoc_Core\ShopManagementCore_Project\SaleShopCore\SaleShopCore\wwwroot\app\controllers\product-category\index.js"' (27b0a520)
+2018-08-20T23:58:26.5199341+07:00 0HLG6NN5SMEAL:00000005 [INF] Request finished in 336.0299ms 304 application/javascript (791a596a)
+2018-08-20T23:58:26.5381522+07:00 0HLG6NN5SMEAG:00000005 [INF] Request finished in 500.8601ms 200 application/javascript (791a596a)
+2018-08-20T23:58:26.9266298+07:00 0HLG6NN5SMEAH:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44345/Admin/ProductCategory/GetAll   (ca22a1cb)
+2018-08-20T23:58:26.9447702+07:00 0HLG6NN5SMEAH:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-20T23:58:26.9628290+07:00 0HLG6NN5SMEAH:00000006 [INF] Authorization was successful for user: "youandpro". (d7eb274a)
+2018-08-20T23:58:27.0648852+07:00 0HLG6NN5SMEAH:00000006 [INF] Executing action method "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.GetAll (SaleShopCore)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-20T23:58:27.1398971+07:00 0HLG6NN5SMEAH:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SaleShopCore.Data.EF " (9958f5bb)
+2018-08-20T23:58:27.2293767+07:00 0HLG6NN5SMEAH:00000006 [INF] Executed DbCommand ("74"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [n].[Id], [n].[Name], [n].[Description], [n].[ParentId], [n].[HomeOrder], [n].[Image], [n].[HomeFlag], [n].[SeoPageTitle], [n].[SeoAlias], [n].[SeoKeywords], [n].[SeoDescription], [n].[Status], [n].[SortOrder], [n].[DateCreated], [n].[DateModified]
+FROM [ProductCategories] AS [n]
+ORDER BY [n].[ParentId]" (0723d8ff)
+2018-08-20T23:58:27.3403041+07:00 0HLG6NN5SMEAH:00000006 [INF] Executed DbCommand ("96"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:58:27.4285385+07:00 0HLG6NN5SMEAH:00000006 [INF] Executed DbCommand ("68"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:58:27.5129699+07:00 0HLG6NN5SMEAH:00000006 [INF] Executed DbCommand ("63"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:58:27.5884911+07:00 0HLG6NN5SMEAH:00000006 [INF] Executed DbCommand ("65"ms) [Parameters=["@_outer_Id='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [dto].[Id], [dto].[Name], [dto].[CategoryId], [dto].[Image], [dto].[Price], [dto].[PromotionPrice], [dto].[OriginalPrice], [dto].[Description], [dto].[Content], [dto].[HomeFlag], [dto].[HotFlag], [dto].[ViewCount], [dto].[Tags], [dto].[Unit], [dto].[SeoPageTitle], [dto].[SeoAlias], [dto].[SeoKeywords], [dto].[SeoDescription], [dto].[DateCreated], [dto].[DateModified], [dto].[Status]
+FROM [Products] AS [dto]
+WHERE @_outer_Id = [dto].[CategoryId]" (0723d8ff)
+2018-08-20T23:58:27.5993239+07:00 0HLG6NN5SMEAH:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-20T23:58:27.6099955+07:00 0HLG6NN5SMEAH:00000006 [INF] Executed action "SaleShopCore.Areas.Admin.Controllers.ProductCategoryController.GetAll (SaleShopCore)" in 655.1484ms (afa2e885)
+2018-08-20T23:58:27.6265533+07:00 0HLG6NN5SMEAH:00000006 [INF] Request finished in 989.3918ms 200 application/json; charset=utf-8 (791a596a)
