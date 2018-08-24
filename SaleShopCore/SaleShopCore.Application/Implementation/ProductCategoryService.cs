@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using SaleShopCore.Application.Interfaces;
 using SaleShopCore.Application.ViewModels.Product;
@@ -10,19 +6,23 @@ using SaleShopCore.Data.Entities;
 using SaleShopCore.Data.Enums;
 using SaleShopCore.Data.IRepositories;
 using SaleShopCore.Infrastructure.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SaleShopCore.Application.Implementation
 {
-    public class ProductCategoryService:IProductCategoryService
+    public class ProductCategoryService : IProductCategoryService
     {
         private IProductCategoryRepository _productCategoryRepository;
         private IUnitOfWork _unitOfWork;
 
-        public ProductCategoryService(IProductCategoryRepository productCategoryRepository,IUnitOfWork unitOfWork)
+        public ProductCategoryService(IProductCategoryRepository productCategoryRepository, IUnitOfWork unitOfWork)
         {
             _productCategoryRepository = productCategoryRepository;
             _unitOfWork = unitOfWork;
         }
+
         public ProductCategoryViewModel Add(ProductCategoryViewModel productCategoryVm)
         {
             var productCategory = Mapper.Map<ProductCategoryViewModel, ProductCategory>(productCategoryVm);
@@ -64,7 +64,7 @@ namespace SaleShopCore.Application.Implementation
         public List<ProductCategoryViewModel> GetAllByParentId(int parentId)
         {
             return _productCategoryRepository
-                .FindAll(n => n.Status == Status.Active && n.ParentId == parentId )
+                .FindAll(n => n.Status == Status.Active && n.ParentId == parentId)
                 .ProjectTo<ProductCategoryViewModel>().ToList();
         }
 
@@ -75,12 +75,31 @@ namespace SaleShopCore.Application.Implementation
 
         public void UpdateParentId(int sourceId, int targetId, Dictionary<int, int> items)
         {
-            throw new NotImplementedException();
+            var sourceCategory = _productCategoryRepository.FindById(sourceId);
+            sourceCategory.Id = targetId;
+            _productCategoryRepository.Update(sourceCategory);
+
+            //Get all siblings
+
+            var siblings = _productCategoryRepository.FindAll(x => items.ContainsKey(x.Id));
+            foreach(var child in siblings)
+            {
+                child.SortOrder = items[child.Id];
+                _productCategoryRepository.Update(child);
+            }
         }
 
         public void ReOrder(int sourceId, int targetId)
         {
-            throw new NotImplementedException();
+            var source = _productCategoryRepository.FindById(sourceId);
+            var target = _productCategoryRepository.FindById(targetId);
+
+            int tempOrder = source.SortOrder;
+            source.SortOrder = target.SortOrder;
+            target.SortOrder = tempOrder;
+
+            _productCategoryRepository.Update(source);
+            _productCategoryRepository.Update(target);
         }
 
         public List<ProductCategoryViewModel> GetHomeCategories(int top)
@@ -91,15 +110,14 @@ namespace SaleShopCore.Application.Implementation
 
             foreach (var category in categories)
             {
-                //do it later    
+                //do it later
             }
             return categories;
-
         }
 
         public void Save()
         {
-           _unitOfWork.Commit();
+            _unitOfWork.Commit();
         }
     }
 }
