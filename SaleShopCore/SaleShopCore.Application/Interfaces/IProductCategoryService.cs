@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using SaleShopCore.Application.ViewModels.Product;
+﻿using SaleShopCore.Application.ViewModels.Product;
+using System.Collections.Generic;
 
 namespace SaleShopCore.Application.Interfaces
 {
@@ -20,6 +20,7 @@ namespace SaleShopCore.Application.Interfaces
         ProductCategoryViewModel GetById(int id);
 
         void UpdateParentId(int sourceId, int targetId, Dictionary<int, int> items);
+
         void ReOrder(int sourceId, int targetId);
 
         List<ProductCategoryViewModel> GetHomeCategories(int top);
