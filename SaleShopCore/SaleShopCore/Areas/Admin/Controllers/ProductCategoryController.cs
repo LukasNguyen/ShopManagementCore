@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using SaleShopCore.Application.Interfaces;
+using SaleShopCore.Application.ViewModels.Product;
+using SaleShopCore.Utilities.Helpers;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SaleShopCore.Areas.Admin.Controllers
 {
@@ -22,6 +26,53 @@ namespace SaleShopCore.Areas.Admin.Controllers
         }
 
         #region Get Data API
+
+        [HttpGet]
+        public IActionResult GetById(int id)
+        {
+            var model = _productCategoryService.GetById(id);
+
+            return new ObjectResult(model);
+        }
+
+        [HttpPost]
+        public IActionResult SaveEntity(ProductCategoryViewModel productVm)
+        {
+            if (!ModelState.IsValid)
+            {
+                IEnumerable<ModelError> allErrors = ModelState.Values.SelectMany(v => v.Errors);
+                return new BadRequestObjectResult(allErrors);
+            }
+            else
+            {
+                productVm.SeoAlias = TextHelper.ToUnsignString(productVm.Name);
+                if (productVm.Id == 0)
+                {
+                    _productCategoryService.Add(productVm);
+                }
+                else
+                {
+                    _productCategoryService.Update(productVm);
+                }
+                _productCategoryService.Save();
+                return new OkObjectResult(productVm);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            if (id == 0)
+            {
+                return new BadRequestResult();
+            }
+            else
+            {
+                _productCategoryService.Delete(id);
+                _productCategoryService.Save();
+                return new OkObjectResult(id);
+            }
+        }
 
         [HttpGet]
         public IActionResult GetAll()
