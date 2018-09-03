@@ -24,9 +24,9 @@
     "mustache.js": "mustache#v2.3.0",
     "twbs-pagination": "v1.4.1",
     "jQuery-EasyUI": "~1.5.3",
-    "ckeditor": "#standard/4.7.3"
+    "ckeditor": "#standard/4.10.0"
   },
   "resolutions": {
-    "ckeditor": "standard/4.7.3"
+    "ckeditor": "standard/4.10.0"
   }
 }

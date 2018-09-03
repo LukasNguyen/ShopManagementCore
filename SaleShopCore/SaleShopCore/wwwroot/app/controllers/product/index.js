@@ -9,7 +9,6 @@
     function registerControls() {
         CKEDITOR.replace('txtContent', {});
 
-
         //Fix: cannot click on element ck in modal
         $.fn.modal.Constructor.prototype.enforceFocus = function () {
             $(document)
@@ -193,9 +192,35 @@
                 });
                 return false;
             }
-
         });
 
+        $('#btnSelectImg').on('click', function () {
+            $('#fileInputImage').click();
+        });
+
+        $("#fileInputImage").on('change', function () {
+            var fileUpload = $(this).get(0);
+            var files = fileUpload.files;
+            var data = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                data.append(files[i].name, files[i]);
+            }
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Upload/UploadImage",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (path) {
+                    $('#txtImage').val(path);
+                    lukas.notify('Upload image succesful!', 'success');
+
+                },
+                error: function () {
+                    lukas.notify('There was error uploading files!', 'error');
+                }
+            });
+        });
     }
 
     function loadCategories() {
