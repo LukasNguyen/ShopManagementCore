@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using SaleShopCore.Application.Implementation;
 using SaleShopCore.Application.Interfaces;
+using SaleShopCore.Authorization;
 using SaleShopCore.Data.EF;
 using SaleShopCore.Data.EF.Repositories;
 using SaleShopCore.Data.Entities;
@@ -93,6 +95,8 @@ namespace SaleShopCore
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
+
+            services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using SaleShopCore.Application.Interfaces;
 using SaleShopCore.Application.ViewModels.System;
+using SaleShopCore.Authorization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,13 +15,22 @@ namespace SaleShopCore.Areas.Admin.Controllers
     public class UserController : Controller
     {
         private readonly IUserService _userService;
+        private readonly IAuthorizationService _authorizationService;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, IAuthorizationService service)
         {
             _userService = userService;
+            this._authorizationService = service;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var result = await _authorizationService.AuthorizeAsync(User, "USER", Operations.Read);
+
+            if(!result.Succeeded)
+            {
+                return new RedirectResult("/Admin/Login/Index");
+            }
+
             return View();
         }
         public IActionResult GetAll()
