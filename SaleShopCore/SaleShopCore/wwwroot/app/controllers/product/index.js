@@ -253,6 +253,24 @@
             });
             return false;
         });
+
+        $('#btn-export').on('click', function () {
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Product/ExportExcel",
+                beforeSend: function () {
+                    lukas.startLoading();
+                },
+                success: function (response) {
+                    window.location.href = response;
+                    lukas.stopLoading();
+                },
+                error: function () {
+                    lukas.notify('Has an error in progress', 'error');
+                    lukas.stopLoading();
+                }
+            });
+        });
     }
 
     function loadCategories() {
