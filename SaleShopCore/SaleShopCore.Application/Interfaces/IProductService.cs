@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SaleShopCore.Application.ViewModels.Product;
+﻿using SaleShopCore.Application.ViewModels.Product;
 using SaleShopCore.Utilities.Dtos;
+using System;
+using System.Collections.Generic;
 
 namespace SaleShopCore.Application.Interfaces
 {
-    public interface IProductService:IDisposable
+    public interface IProductService : IDisposable
     {
         List<ProductViewModel> GetAll();
 
@@ -21,6 +20,10 @@ namespace SaleShopCore.Application.Interfaces
         ProductViewModel GetById(int id);
 
         void ImportExcel(string filePath, int categoryId);
+
+        void AddQuantity(int productId, List<ProductQuantityViewModel> quantities);
+
+        List<ProductQuantityViewModel> GetQuantities(int productId);
 
         void Save();
     }

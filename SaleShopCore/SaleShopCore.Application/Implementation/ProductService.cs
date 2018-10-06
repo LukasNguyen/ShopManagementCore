@@ -23,16 +23,19 @@ namespace SaleShopCore.Application.Implementation
         private IProductTagRepository _productTagRepository;
         private readonly ITagRepository _tagRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IProductQuantityRepository _productQuantityRepository;
 
         public ProductService(IProductRepository productRepository,
             ITagRepository tagRepository,
             IProductTagRepository productTagRepository,
+            IProductQuantityRepository productQuantityRepository,
             IUnitOfWork unitOfWork)
         {
             _productRepository = productRepository;
             this._tagRepository = tagRepository;
             this._productTagRepository = productTagRepository;
             this._unitOfWork = unitOfWork;
+            _productQuantityRepository = productQuantityRepository;
         }
 
         public ProductViewModel Add(ProductViewModel productVm)
@@ -194,6 +197,26 @@ namespace SaleShopCore.Application.Implementation
                     _productRepository.Add(product);
                 }
             }
+        }
+
+        public void AddQuantity(int productId, List<ProductQuantityViewModel> quantities)
+        {
+            _productQuantityRepository.RemoveMultiple(_productQuantityRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach (var quantity in quantities)
+            {
+                _productQuantityRepository.Add(new ProductQuantity()
+                {
+                    ProductId = productId,
+                    ColorId = quantity.ColorId,
+                    SizeId = quantity.SizeId,
+                    Quantity = quantity.Quantity
+                });
+            }
+        }
+
+        public List<ProductQuantityViewModel> GetQuantities(int productId)
+        {
+            return _productQuantityRepository.FindAll(x => x.ProductId == productId).ProjectTo<ProductQuantityViewModel>().ToList();
         }
     }
 }
