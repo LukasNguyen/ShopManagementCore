@@ -1,15 +1,14 @@
-﻿using System;
+﻿using SaleShopCore.Data.Entities;
+using SaleShopCore.Data.IRepositories;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using SaleShopCore.Data.Entities;
-using SaleShopCore.Data.IRepositories;
 
 namespace SaleShopCore.Data.EF.Repositories
 {
-    public class ProductCategoryRepository:EFRepository<ProductCategory,int>,IProductCategoryRepository
+    public class ProductCategoryRepository : EFRepository<ProductCategory, int>, IProductCategoryRepository
     {
         private AppDbContext _context;
+
         public ProductCategoryRepository(AppDbContext context) : base(context)
         {
             _context = context;
