@@ -25,7 +25,8 @@
     "twbs-pagination": "v1.4.1",
     "jQuery-EasyUI": "~1.5.3",
     "ckeditor": "#standard/4.10.0",
-    "jquery-treegrid": "0.3.0"
+    "jquery-treegrid": "0.3.0",
+    "bootstrap-datepicker": "v1.7.0-RC1"
   },
   "resolutions": {
     "ckeditor": "standard/4.10.0"
