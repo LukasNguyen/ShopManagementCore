@@ -24,11 +24,13 @@ namespace SaleShopCore.Application.Implementation
         private readonly ITagRepository _tagRepository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IProductQuantityRepository _productQuantityRepository;
+        private readonly IProductImageRepository _productImageRepository;
 
         public ProductService(IProductRepository productRepository,
             ITagRepository tagRepository,
             IProductTagRepository productTagRepository,
             IProductQuantityRepository productQuantityRepository,
+            IProductImageRepository productImageRepository,
             IUnitOfWork unitOfWork)
         {
             _productRepository = productRepository;
@@ -36,6 +38,7 @@ namespace SaleShopCore.Application.Implementation
             this._productTagRepository = productTagRepository;
             this._unitOfWork = unitOfWork;
             _productQuantityRepository = productQuantityRepository;
+            _productImageRepository = productImageRepository;
         }
 
         public ProductViewModel Add(ProductViewModel productVm)
@@ -217,6 +220,26 @@ namespace SaleShopCore.Application.Implementation
         public List<ProductQuantityViewModel> GetQuantities(int productId)
         {
             return _productQuantityRepository.FindAll(x => x.ProductId == productId).ProjectTo<ProductQuantityViewModel>().ToList();
+        }
+
+        public List<ProductImageViewModel> GetImages(int productId)
+        {
+            return _productImageRepository.FindAll(x => x.ProductId == productId)
+                .ProjectTo<ProductImageViewModel>().ToList();
+        }
+
+        public void AddImages(int productId, string[] images)
+        {
+            _productImageRepository.RemoveMultiple(_productImageRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach (var image in images)
+            {
+                _productImageRepository.Add(new ProductImage()
+                {
+                    Path = image,
+                    ProductId = productId,
+                    Caption = string.Empty
+                });
+            }
         }
     }
 }
