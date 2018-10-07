@@ -29,6 +29,10 @@ namespace SaleShopCore.Application.Interfaces
 
         void AddImages(int productId, string[] images);
 
+        List<WholePriceViewModel> GetWholePrices(int productId);
+
+        void AddWholePrice(int productId, List<WholePriceViewModel> wholePrices);
+
         void Save();
     }
 }
