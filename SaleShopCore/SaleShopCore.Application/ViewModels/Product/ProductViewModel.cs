@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SaleShopCore.Data.Enums;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
-using SaleShopCore.Data.Enums;
 
 namespace SaleShopCore.Application.ViewModels.Product
 {
     public class ProductViewModel
     {
         public int Id { get; set; }
+
         [StringLength(255)]
         [Required]
         public string Name { get; set; }

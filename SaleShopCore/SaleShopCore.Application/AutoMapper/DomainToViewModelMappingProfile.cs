@@ -23,6 +23,7 @@ namespace SaleShopCore.Application.AutoMapper
             CreateMap<Color, ColorViewModel>().MaxDepth(2);
             CreateMap<Size, SizeViewModel>().MaxDepth(2);
             CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
+            CreateMap<ProductImage, ProductImageViewModel>().MaxDepth(2);
         }
     }
 }

@@ -25,6 +25,10 @@ namespace SaleShopCore.Application.Interfaces
 
         List<ProductQuantityViewModel> GetQuantities(int productId);
 
+        List<ProductImageViewModel> GetImages(int productId);
+
+        void AddImages(int productId, string[] images);
+
         void Save();
     }
 }
