@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SaleShopCore.Application.ViewModels.Blog;
 using SaleShopCore.Application.ViewModels.Product;
 using SaleShopCore.Application.ViewModels.System;
 using SaleShopCore.Data.Entities;
@@ -33,6 +34,10 @@ namespace SaleShopCore.Application.AutoMapper
             CreateMap<BillDetailViewModel, BillDetail>()
               .ConstructUsing(c => new BillDetail(c.Id, c.BillId, c.ProductId,
               c.Quantity, c.Price, c.ColorId, c.SizeId));
+
+            CreateMap<BlogViewModel, Blog>();
+
+            CreateMap<BlogTagViewModel, BlogTag>();
         }
     }
 }

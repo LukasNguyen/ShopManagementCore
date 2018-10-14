@@ -9,6 +9,7 @@
         public const string CartSession = "CartSession";
 
         public const string ProductTag = "Product";
+
         public const string BlogTag = "Blog";
 
         public static class AppRole

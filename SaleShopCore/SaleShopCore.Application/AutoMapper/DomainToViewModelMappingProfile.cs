@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using AutoMapper;
+using SaleShopCore.Application.ViewModels.Blog;
+using SaleShopCore.Application.ViewModels.Common;
 using SaleShopCore.Application.ViewModels.Product;
 using SaleShopCore.Application.ViewModels.System;
 using SaleShopCore.Data.Entities;
@@ -25,6 +27,13 @@ namespace SaleShopCore.Application.AutoMapper
             CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
             CreateMap<ProductImage, ProductImageViewModel>().MaxDepth(2);
             CreateMap<WholePrice, WholePriceViewModel>().MaxDepth(2);
+
+            CreateMap<Blog, BlogViewModel>();
+            CreateMap<BlogTag, BlogTagViewModel>();
+            CreateMap<Slide, SlideViewModel>();
+            CreateMap<SystemConfig, SystemConfigViewModel>();
+            CreateMap<Footer, FooterViewModel>();
+            CreateMap<Tag, TagViewModel>();
         }
     }
 }

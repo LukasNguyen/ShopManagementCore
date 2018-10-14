@@ -95,6 +95,11 @@ namespace SaleShopCore
             services.AddTransient<IProductQuantityRepository, ProductQuantityRepository>();
             services.AddTransient<IProductImageRepository, ProductImageRepository>();
             services.AddTransient<IWholePriceRepository, WholePriceRepository>();
+            services.AddTransient<IFooterRepository, FooterRepository>();
+            services.AddTransient<ISlideRepository, SlideRepository>();
+            services.AddTransient<ISystemConfigRepository, SystemConfigRepository>();
+            services.AddTransient<IBlogRepository, BlogRepository>();
+            services.AddTransient<IBlogTagRepository, BlogTagRepository>();
 
             //Services
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
@@ -103,6 +108,8 @@ namespace SaleShopCore
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IBillService, BillService>();
+            services.AddTransient<ICommonService, CommonService>();
+            services.AddTransient<IBlogService, BlogService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
         }
