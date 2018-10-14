@@ -1,12 +1,11 @@
-﻿using SaleShopCore.Infrastructure.SharedKernel;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace SaleShopCore.Data.Entities
+namespace SaleShopCore.Application.ViewModels.Common
 {
-    [Table("Slides")]
-    public class Slide : DomainEntity<int>
+    public class SlideViewModel
     {
+        public int Id { get; set; }
+
         [StringLength(250)]
         [Required]
         public string Name { set; get; }

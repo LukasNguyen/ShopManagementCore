@@ -33,6 +33,10 @@ namespace SaleShopCore.Application.Interfaces
 
         void AddWholePrice(int productId, List<WholePriceViewModel> wholePrices);
 
+        List<ProductViewModel> GetLastest(int top);
+
+        List<ProductViewModel> GetHotProducts(int top);
+
         void Save();
     }
 }

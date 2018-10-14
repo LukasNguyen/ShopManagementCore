@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 SaleShopCore/SaleShopCore/wwwroot/uploaded/
+SaleShopCore/SaleShopCore/Logs/
