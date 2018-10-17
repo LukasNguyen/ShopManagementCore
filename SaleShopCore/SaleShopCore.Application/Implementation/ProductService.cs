@@ -2,6 +2,7 @@
 using AutoMapper.QueryableExtensions;
 using OfficeOpenXml;
 using SaleShopCore.Application.Interfaces;
+using SaleShopCore.Application.ViewModels.Common;
 using SaleShopCore.Application.ViewModels.Product;
 using SaleShopCore.Data.Entities;
 using SaleShopCore.Data.Enums;
@@ -278,6 +279,44 @@ namespace SaleShopCore.Application.Implementation
                 .Take(top)
                 .ProjectTo<ProductViewModel>()
                 .ToList();
+        }
+
+        public List<ProductViewModel> GetRelatedProducts(int id, int top)
+        {
+            var product = _productRepository.FindById(id);
+
+            return _productRepository.FindAll(x => x.Status == Status.Active
+                && x.Id != id && x.CategoryId == product.CategoryId)
+            .OrderByDescending(x => x.DateCreated)
+            .Take(top)
+            .ProjectTo<ProductViewModel>()
+            .ToList();
+        }
+
+        public List<ProductViewModel> GetUpsellProducts(int top)
+        {
+            return _productRepository.FindAll(x => x.PromotionPrice != null)
+               .OrderByDescending(x => x.DateModified)
+               .Take(top)
+               .ProjectTo<ProductViewModel>().ToList();
+        }
+
+        public List<TagViewModel> GetProductTags(int productId)
+        {
+            var tags = _tagRepository.FindAll();
+            var productTags = _productTagRepository.FindAll();
+
+            var query = from t in tags
+                        join pt in productTags
+                        on t.Id equals pt.TagId
+                        where pt.ProductId == productId
+                        select new TagViewModel()
+                        {
+                            Id = t.Id,
+                            Name = t.Name
+                        };
+
+            return query.ToList();
         }
     }
 }
