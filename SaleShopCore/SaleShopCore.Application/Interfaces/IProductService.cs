@@ -1,4 +1,5 @@
-﻿using SaleShopCore.Application.ViewModels.Product;
+﻿using SaleShopCore.Application.ViewModels.Common;
+using SaleShopCore.Application.ViewModels.Product;
 using SaleShopCore.Utilities.Dtos;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,12 @@ namespace SaleShopCore.Application.Interfaces
         List<ProductViewModel> GetLastest(int top);
 
         List<ProductViewModel> GetHotProducts(int top);
+
+        List<ProductViewModel> GetRelatedProducts(int id, int top);
+
+        List<ProductViewModel> GetUpsellProducts(int top);
+
+        List<TagViewModel> GetProductTags(int productId);
 
         void Save();
     }
