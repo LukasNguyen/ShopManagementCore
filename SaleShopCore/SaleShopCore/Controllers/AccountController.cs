@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SaleShopCore.Data.Entities;
+using SaleShopCore.Data.Enums;
 using SaleShopCore.Models;
 using SaleShopCore.Models.AccountViewModels;
 using SaleShopCore.Services;
@@ -224,7 +225,15 @@ namespace SaleShopCore.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new AppUser { UserName = model.Email, Email = model.Email };
+                var user = new AppUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FullName = model.FullName,
+                    PhoneNumber = model.PhoneNumber,
+                    BirthDay = model.BirthDay,
+                    Status = Status.Active
+                };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
