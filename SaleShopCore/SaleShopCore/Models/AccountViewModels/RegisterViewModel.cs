@@ -8,6 +8,22 @@ namespace SaleShopCore.Models.AccountViewModels
 {
     public class RegisterViewModel
     {
+        [Required(ErrorMessage = "Full name required", AllowEmptyStrings = false)]
+        [Display(Name = "Full name")]
+        public string FullName { set; get; }
+
+        [Display(Name = "DOB")]
+        public DateTime? BirthDay { set; get; }
+
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+
+        [Display(Name = "Phone number")]    
+        public string PhoneNumber { set; get; }
+
+        [Display(Name = "Avatar")]
+        public string Avatar { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
