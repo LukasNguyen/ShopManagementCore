@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
+using PaulMiami.AspNetCore.Mvc.Recaptcha;
 using SaleShopCore.Application.Implementation;
 using SaleShopCore.Application.Interfaces;
 using SaleShopCore.Authorization;
@@ -112,6 +113,14 @@ namespace SaleShopCore
             services.AddTransient<IBlogService, BlogService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
+
+            // Add recaptcha
+
+            services.AddRecaptcha(new RecaptchaOptions
+            {
+                SiteKey = Configuration["Recaptcha:SiteKey"],
+                SecretKey = Configuration["Recaptcha:SecretKey"]
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

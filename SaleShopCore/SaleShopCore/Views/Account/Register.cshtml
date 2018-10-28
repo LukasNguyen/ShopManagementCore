@@ -76,6 +76,11 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
+                                    <p></p>
+                                    <recaptcha />
+                                    <span class="text-danger" id="recaptchaErrorMessage"></span>
+                                </div>
+                                <div class="col-xs-12">
                                     <div class="submit-text">
                                         <button type="submit" class="button"><i class="fa fa-user"></i>&nbsp; <span>Register</span></button>
                                     </div>
@@ -91,5 +96,6 @@
 <!-- Main Container End -->
 
 @section Scripts {
+    <recaptcha-script validation-message-element-id="recaptchaErrorMessage" />
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }
