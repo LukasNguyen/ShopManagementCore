@@ -10,6 +10,7 @@ namespace SaleShopCore.Controllers
         private readonly IProductService _productService;
         private readonly IProductCategoryService _productCategoryService;
         private readonly IConfiguration _configuration;
+
         public ProductController(IProductService productService, IConfiguration configuration,
             IProductCategoryService productCategoryService)
         {
@@ -42,6 +43,24 @@ namespace SaleShopCore.Controllers
             return View(catalog);
         }
 
+        [Route("search.html", Name = "Search")]
+        public IActionResult Search(string keyword, int? pageSize, string sortBy, int page = 1)
+        {
+            ViewData["BodyClass"] = "shop_grid_full_width_page";
+
+            var catalog = new SearchResultViewModel();
+
+            if (pageSize == null)
+                pageSize = _configuration.GetValue<int>("PageSize");
+
+            catalog.PageSize = pageSize;
+            catalog.SortType = sortBy;
+            catalog.Data = _productService.GetAllPaging(null, keyword, page, pageSize.Value);
+            catalog.Keyword = keyword;
+
+            return View(catalog);
+        }
+
         [Route("{alias}-p.{id}.html", Name = "ProductDetail")]
         public IActionResult Details(int id)
         {
@@ -57,6 +76,5 @@ namespace SaleShopCore.Controllers
 
             return View(model);
         }
-
     }
 }
