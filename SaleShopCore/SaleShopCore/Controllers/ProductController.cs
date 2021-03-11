@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using SaleShopCore.Application.Interfaces;
 using SaleShopCore.Models.ProductViewModels;
+using System.Linq;
 
 namespace SaleShopCore.Controllers
 {
@@ -10,13 +12,17 @@ namespace SaleShopCore.Controllers
         private readonly IProductService _productService;
         private readonly IProductCategoryService _productCategoryService;
         private readonly IConfiguration _configuration;
+        private readonly IBillService _billService;
 
-        public ProductController(IProductService productService, IConfiguration configuration,
-            IProductCategoryService productCategoryService)
+        public ProductController(IProductService productService,
+            IConfiguration configuration,
+            IProductCategoryService productCategoryService,
+            IBillService billService)
         {
             _productService = productService;
             _productCategoryService = productCategoryService;
             _configuration = configuration;
+            this._billService = billService;
         }
 
         [Route("products.html")]
@@ -73,6 +79,8 @@ namespace SaleShopCore.Controllers
             model.UpsellProducts = _productService.GetUpsellProducts(6);
             model.ProductImages = _productService.GetImages(id);
             model.Tags = _productService.GetProductTags(id);
+            model.Colors = _billService.GetColors().Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
+            model.Sizes = _billService.GetSizes().Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
 
             return View(model);
         }

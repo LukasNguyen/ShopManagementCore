@@ -37,9 +37,9 @@ namespace SaleShopCore.Application.Implementation
             IUnitOfWork unitOfWork)
         {
             _productRepository = productRepository;
-            this._tagRepository = tagRepository;
-            this._productTagRepository = productTagRepository;
-            this._unitOfWork = unitOfWork;
+            _tagRepository = tagRepository;
+            _productTagRepository = productTagRepository;
+            _unitOfWork = unitOfWork;
             _productQuantityRepository = productQuantityRepository;
             _productImageRepository = productImageRepository;
             _wholePriceRepository = wholePriceRepository;
@@ -317,6 +317,19 @@ namespace SaleShopCore.Application.Implementation
                         };
 
             return query.ToList();
+        }
+
+        public bool CheckAvailability(int productId, int sizeId, int colorId)
+        {
+            var quantity = _productQuantityRepository.FindSingle(
+                x => x.ColorId == colorId
+                    && x.SizeId == sizeId
+                    && x.ProductId == productId);
+
+            if (quantity == null)
+                return false;
+
+            return quantity.Quantity > 0;
         }
     }
 }
