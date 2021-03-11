@@ -44,6 +44,8 @@ namespace SaleShopCore.Application.Interfaces
 
         List<TagViewModel> GetProductTags(int productId);
 
+        bool CheckAvailability(int productId, int sizeId, int colorId);
+
         void Save();
     }
 }
