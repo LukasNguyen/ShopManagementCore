@@ -176,5 +176,15 @@ namespace SaleShopCore.Application.Implementation
            && x.BillId == billId && x.ColorId == colorId && x.SizeId == sizeId);
             _orderDetailRepository.Remove(detail);
         }
+
+        public ColorViewModel GetColor(int id)
+        {
+            return Mapper.Map<Color, ColorViewModel>(_colorRepository.FindById(id));
+        }
+
+        public SizeViewModel GetSize(int id)
+        {
+            return Mapper.Map<Size, SizeViewModel>(_sizeRepository.FindById(id));
+        }
     }
 }

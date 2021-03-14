@@ -39,8 +39,4 @@
     <ProjectReference Include="..\SaleShopCore.Utilities\SaleShopCore.Utilities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\client-app\controllers\cart\" />
-  </ItemGroup>
-
 </Project>
