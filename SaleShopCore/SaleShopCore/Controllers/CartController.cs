@@ -15,11 +15,12 @@ namespace SaleShopCore.Controllers
     public class CartController : Controller
     {
         private readonly IProductService _productService;
+        private readonly IBillService _billService;
 
-
-        public CartController(IProductService productService)
+        public CartController(IProductService productService, IBillService billService)
         {
             this._productService = productService;
+            this._billService = billService;
         }
 
         [Route("cart.html", Name = "Cart")]
@@ -102,8 +103,8 @@ namespace SaleShopCore.Controllers
                     {
                         Product = product,
                         Quantity = quantity,
-                        ColorId = colorId,
-                        SizeId = sizeId,
+                        Color = _billService.GetColor(colorId),
+                        Size = _billService.GetSize(sizeId),
                         Price = product.PromotionPrice ?? product.Price
                     });
                     hasChanged = true;
@@ -123,8 +124,8 @@ namespace SaleShopCore.Controllers
                 {
                     Product = product,
                     Quantity = quantity,
-                    ColorId = colorId,
-                    SizeId = sizeId,
+                    Color = _billService.GetColor(colorId),
+                    Size = _billService.GetSize(sizeId),
                     Price = product.PromotionPrice ?? product.Price
                 });
                 HttpContext.Session.Set(CommonConstants.CartSession, cart);
@@ -167,7 +168,7 @@ namespace SaleShopCore.Controllers
         /// <param name="productId"></param>
         /// <param name="quantity"></param>
         /// <returns></returns>
-        public IActionResult UpdateCart(int productId, int quantity)
+        public IActionResult UpdateCart(int productId, int quantity, int colorId, int sizeId)
         {
             var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
             if (session != null)
@@ -181,6 +182,8 @@ namespace SaleShopCore.Controllers
                         item.Product = product;
                         item.Quantity = quantity;
                         item.Price = product.PromotionPrice ?? product.Price;
+                        item.Color = _billService.GetColor(colorId);
+                        item.Size = _billService.GetSize(sizeId);
                         hasChanged = true;
                     }
                 }
@@ -191,6 +194,21 @@ namespace SaleShopCore.Controllers
                 return new OkObjectResult(productId);
             }
             return new EmptyResult();
+        }
+
+
+        [HttpGet]
+        public IActionResult GetColors()
+        {
+            var colors = _billService.GetColors();
+            return new OkObjectResult(colors);
+        }
+
+        [HttpGet]
+        public IActionResult GetSizes()
+        {
+            var sizes = _billService.GetSizes();
+            return new OkObjectResult(sizes);
         }
         #endregion
     }
