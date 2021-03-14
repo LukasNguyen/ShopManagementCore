@@ -23,9 +23,14 @@
                     sizeId: sizeId
                 },
                 success: function () {
-                    alert(1);
+                    lukas.notify('Product was added successfully', 'success');
+                    loadHeaderCart();
                 }
             });
         });
+    }
+
+    function loadHeaderCart() {
+        $("#headerCart").load("/AjaxContent/HeaderCart");
     }
 }

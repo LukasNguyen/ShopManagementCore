@@ -18,7 +18,7 @@
                 },
                 success: function (response) {
                     lukas.notify('The product was added to cart', 'success');
-                    //loadHeaderCart();
+                    loadHeaderCart();
                     //loadMyCart();
                 }
             });
@@ -35,16 +35,16 @@
                 },
                 success: function (response) {
                     lukas.notify('The product was removed', 'success');
-                    //loadHeaderCart();
-                    loadMyCart();
+                    loadHeaderCart();
+                    //loadMyCart();
                 }
             });
         });
     }
 
-    //function loadHeaderCart() {
-    //    $("#headerCart").load("/AjaxContent/HeaderCart");
-    //}
+    function loadHeaderCart() {
+        $("#headerCart").load("/AjaxContent/HeaderCart");
+    }
 
     //function loadMyCart() {
     //    $("#sidebarCart").load("/AjaxContent/MyCart");
