@@ -190,7 +190,7 @@
     }
 
     function getColorOptions(selectedId) {
-        var colors = "<select class='form-control ddlColorId'>";
+        var colors = "<select class='form-control ddlColorId'><option value='0'></option>";
         $.each(cachedObj.colors, function (i, color) {
             if (selectedId === color.Id)
                 colors += '<option value="' + color.Id + '" selected="selected">' + color.Name + '</option>';
@@ -202,7 +202,7 @@
     }
 
     function getSizeOptions(selectedId) {
-        var sizes = "<select class='form-control ddlSizeId'>";
+        var sizes = "<select class='form-control ddlSizeId'> <option value='0'></option>";
         $.each(cachedObj.sizes, function (i, size) {
             if (selectedId === size.Id)
                 sizes += '<option value="' + size.Id + '" selected="selected">' + size.Name + '</option>';
