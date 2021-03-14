@@ -111,6 +111,7 @@ namespace SaleShopCore
             services.AddTransient<IBillService, BillService>();
             services.AddTransient<ICommonService, CommonService>();
             services.AddTransient<IBlogService, BlogService>();
+            services.AddTransient<IViewRenderService, ViewRenderService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 

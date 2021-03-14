@@ -1,8 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using SaleShopCore.Application.Interfaces;
+using SaleShopCore.Application.ViewModels.Product;
+using SaleShopCore.Data.Enums;
 using SaleShopCore.Extensions;
 using SaleShopCore.Models;
+using SaleShopCore.Services;
 using SaleShopCore.Utilities.Constants;
 using System;
 using System.Collections.Generic;
@@ -16,11 +20,21 @@ namespace SaleShopCore.Controllers
     {
         private readonly IProductService _productService;
         private readonly IBillService _billService;
+        private readonly IConfiguration _configuration;
+        private readonly IViewRenderService _viewRenderService;
+        private readonly IEmailSender _emailSender;
 
-        public CartController(IProductService productService, IBillService billService)
+        public CartController(IProductService productService,
+            IBillService billService,
+            IConfiguration configuration,
+            IViewRenderService viewRenderService,
+            IEmailSender emailSender)
         {
             this._productService = productService;
             this._billService = billService;
+            this._configuration = configuration;
+            this._viewRenderService = viewRenderService;
+            this._emailSender = emailSender;
         }
 
         [Route("cart.html", Name = "Cart")]
@@ -32,9 +46,76 @@ namespace SaleShopCore.Controllers
         [Route("checkout.html", Name = "Checkout")]
         public IActionResult Checkout()
         {
-            return View();
+            var model = new CheckoutViewModel();
+            var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
+            if (session.Any(x => x.Color == null || x.Size == null))
+            {
+                return Redirect("/cart.html");
+            }
+
+            model.Carts = session;
+            return View(model);
         }
 
+        [Route("checkout.html", Name = "Checkout")]
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public IActionResult Checkout(CheckoutViewModel model)
+        {
+            var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
+
+            if (ModelState.IsValid)
+            {
+                if (session != null)
+                {
+                    var details = new List<BillDetailViewModel>();
+                    foreach (var item in session)
+                    {
+                        details.Add(new BillDetailViewModel()
+                        {
+                            Product = item.Product,
+                            Price = item.Price,
+                            ColorId = item.Color.Id,
+                            SizeId = item.Size.Id,
+                            Quantity = item.Quantity,
+                            ProductId = item.Product.Id
+                        });
+                    }
+                    var billViewModel = new BillViewModel()
+                    {
+                        CustomerMobile = model.CustomerMobile,
+                        BillStatus = BillStatus.New,
+                        CustomerAddress = model.CustomerAddress,
+                        CustomerName = model.CustomerName,
+                        CustomerMessage = model.CustomerMessage,
+                        BillDetails = details
+                    };
+                    if (User.Identity.IsAuthenticated == true)
+                    {
+                        billViewModel.CustomerId = Guid.Parse(User.GetSpecificClaim("UserId"));
+                    }
+                    _billService.Create(billViewModel);
+                    try
+                    {
+
+                        _billService.Save();
+
+                        //Send mail
+                        //var content = await _viewRenderService.RenderToStringAsync("Cart/_BillMail", billViewModel);
+                        //await _emailSender.SendEmailAsync(_configuration["MailSettings:AdminMail"], "New bill from Panda Shop", content);
+                        ViewData["Success"] = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        ViewData["Success"] = false;
+                        ModelState.AddModelError("", ex.Message);
+                    }
+
+                }
+            }
+            model.Carts = session;
+            return View(model);
+        }
 
         #region AJAX Request
 
@@ -46,7 +127,7 @@ namespace SaleShopCore.Controllers
         {
             var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
 
-            if(session == null)
+            if (session == null)
             {
                 session = new List<ShoppingCartViewModel>();
             }
